@@ -42,7 +42,9 @@ export async function generateStaticParams() {
   // Also add any archive projects that might not have standalone MDX files yet
   const archiveSlugs = archiveData.en.filter((p: any) => p.problem).map((p: any) => p.id);
   
-  const allSlugs = [...new Set([...slugs, ...archiveSlugs])];
+  // Exclude slugs that have their own dedicated page.tsx (to avoid overriding them)
+  const dedicatedRoutes = ['edtech-tools'];
+  const allSlugs = [...new Set([...slugs, ...archiveSlugs])].filter(s => !dedicatedRoutes.includes(s));
   const params = [];
   
   for (const lang of ['en', 'es']) {
