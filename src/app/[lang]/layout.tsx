@@ -22,6 +22,10 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Antonio Tagaruma Garcia | Portfolio",
   description: "Educator and Full-Stack Developer. I build tools that teach, automate, and scale.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default async function RootLayout({
