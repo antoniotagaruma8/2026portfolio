@@ -1,0 +1,100 @@
+---
+title: "WordSnake"
+subtitle: "El Juego de Sprint de Categorías"
+tech: ["HTML5 Canvas", "CSS3", "Vanilla JavaScript"]
+link: "https://word-snake-pi.vercel.app"
+github: "https://github.com/antoniotagaruma8/WordSnake"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>WordSnake</strong> es una aplicación web educativa competitiva y de ritmo rápido diseñada para poner a prueba la memoria de vocabulario, la ortografía y el pensamiento rápido. Funcionando como un "sprint de categorías" de alto riesgo, el juego desafía a dos equipos a construir la cadena continua de palabras más larga antes de que se acabe el tiempo. Cada nueva palabra debe comenzar con la última letra de la palabra anterior y adherirse estrictamente a la categoría temática elegida.
+
+Construido con un enfoque en el despliegue versátil en entornos educativos y de team-building, WordSnake ofrece una arquitectura de modo dual: un <strong>Modo Pizarra</strong> para facilitar el juego tradicional en pizarra física, y un <strong>Modo Smart TV</strong> totalmente digital que presenta una interfaz interactiva de pantalla dividida con validación integrada y teclados en pantalla.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">La Regla de la Cadena</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cada palabra enviada debe comenzar con la letra final de la palabra anterior, lo que impone una estricta precisión ortográfica y pensamiento lateral bajo presión.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Integridad Categórica</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Todo el vocabulario debe encajar en la categoría seleccionada. El motor rechaza automáticamente los envíos fuera de tema utilizando diccionarios precompilados y búsquedas de conjuntos (Set) en O(1).</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Exclusividad Global</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Las palabras se rastrean globalmente en ambos equipos. Una vez que se juega una palabra, se elimina del grupo disponible, lo que evita la repetición y fuerza el recuerdo creativo.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+El proyecto está desarrollado utilizando un stack robusto y sin dependencias de **HTML5/CSS3/JS Vanilla**, asegurando la máxima compatibilidad multiplataforma y tiempos de carga rápidos en el hardware del aula.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend y Estilos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza CSS Grid y Flexbox avanzados para diseños complejos de interfaz de usuario en pantalla dividida (modo Smart TV). Cuenta con animaciones SVG personalizadas de 'dash-offset' para los anillos del temporizador y un sistema de partículas HTML5 Canvas para el fondo.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión del Estado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un objeto `G` centralizado gestiona los temporizadores, las categorías activas y los estados individuales de los equipos. El motor de validación procesa la manipulación de cadenas en tiempo real en relación con el `Set()` utilizado globalmente.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Teclados Virtuales</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los teclados en pantalla generados dinámicamente para el modo Smart TV optimizan la experiencia en pantallas táctiles o pantallas de pizarra inteligente sin depender de teclados físicos.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estructuras de Datos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Alberga diccionarios exhaustivos (`categories.js`) que utilizan objetos `Set` de JavaScript para tiempos de búsqueda en O(1). Admite "Categorías Personalizadas" dinámicas para temas especializados.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Visión y Utilidad del Proyecto</h2>
+
+WordSnake acorta la brecha entre los juegos de vocabulario tradicionales en el aula y las experiencias interactivas digitales modernas. Al ofrecer un **Modo Pizarra** limpio y sin distracciones, actúa como un elegante temporizador y generador de indicaciones para el juego físico. Por el contrario, el **Modo Smart TV** transforma la aplicación en una arena digital independiente.
+
+Con su UI de alta fidelidad, rigurosa validación de entradas y mecánicas competitivas, WordSnake es una herramienta ideal para aulas de ESL/EFL, actividades rompehielos corporativas y entornos de fiesta casuales.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/word-snake/1.png" alt="WordSnake App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/word-snake/2.png" alt="WordSnake App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

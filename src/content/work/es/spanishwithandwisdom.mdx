@@ -1,0 +1,120 @@
+---
+title: "Spanish Wit & Wisdom!"
+subtitle: "Aplicación Web de Tarjetas Interactiva para Aprender Idiomas"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript"]
+link: "https://spanishwithandwisdom.vercel.app"
+github: "https://github.com/antoniotagaruma8/spanishtoenglish"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>"Spanish Wit & Wisdom!"</strong> es una aplicación web educativa, interactiva y bellamente diseñada que ayuda a los usuarios a aprender modismos, refranes y adivinanzas en español. A diferencia de las aplicaciones tradicionales de tarjetas de vocabulario (flashcards), emplea un mecanismo único de revelación progresiva de cuatro pasos que guía al usuario desde la frase original en español, a su traducción literal, su equivalente en inglés y, finalmente, su significado subyacente.
+
+Construida completamente con un stack de frontend ligero, la aplicación presenta una estética "cartoon" vibrante y gamificada, microinteracciones fluidas y retroalimentación de audio sintetizada, haciendo que el aprendizaje de idiomas sea una experiencia atractiva y memorable.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Motor de Tarjetas Progresivo</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cada tarjeta se revela en 4 etapas (Español -> Traducción Literal -> Equivalente en Inglés -> Significado), manteniendo al usuario concentrado y promoviendo una comprensión lingüística más profunda.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">UI/UX Ultra Vibrante</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utiliza tipografía expresiva, sombras llamativas y colores de categoría neón dentro de un diseño de marco único para crear una sensación lúdica similar a la de un juego.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Feedback de Audio Sintético</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utiliza la API de Audio Web nativa del navegador para sintetizar efectos de sonido satisfactorios (chasquidos y silbidos) de forma dinámica sin la sobrecarga de cargar archivos de audio externos.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Características Principales y Mecánicas</h2>
+
+La aplicación transforma la memorización rutinaria en una experiencia interactiva utilizando las siguientes mecánicas:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Aprendizaje Aleatorio</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    La aplicación mezcla el banco de datos de 50 tarjetas en cada sesión para garantizar una experiencia de aprendizaje única cada vez. Las categorías incluyen Refranes, Modismos y Adivinanzas.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Accesibilidad por Teclado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los usuarios pueden navegar sin problemas a través de las revelaciones progresivas y las siguientes tarjetas usando la `Barra Espaciadora`, lo que permite un estudio rápido y sin usar el ratón.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Fondo Animado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Cuenta con un fondo de gradiente CSS multicolor en animación continua que añade energía dinámica al entorno de aprendizaje.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+El proyecto está construido como una aplicación frontend autónoma, sin dependencias externas.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estructura de Datos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Alberga un arreglo de objetos JSON estructurados que categorizan el contenido en Refranes, Modismos y Adivinanzas.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Sistema de Estilos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Implementa un CSS Grid responsivo de 2x2 dentro de la tarjeta. Emplea un sólido conjunto de variables CSS para manejar la codificación de colores dinámica según la categoría, junto con elementos de Glassmorfismo (`backdrop-filter`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Lógica de la Aplicación</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Rastrea el arreglo mezclado, el índice de la tarjeta actual y el paso de revelación progresiva. Actualiza dinámicamente las insignias de categoría, la visibilidad de las capas y el contenido de texto a través de la manipulación del DOM con Vanilla JavaScript.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Propuesta de Valor</h2>
+
+Al proporcionar tanto la traducción *literal* como el *significado*, la aplicación enseña a los estudiantes no solo vocabulario, sino la lógica cultural detrás de las expresiones españolas. El diseño vibrante, las revelaciones paso a paso y el feedback de audio transforman la memorización en un minijuego interactivo, mientras que la integración fluida de la barra espaciadora maximiza la eficiencia del estudio.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/spanishwithandwisdom/1.png" alt="Spanish Wit and Wisdom App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/spanishwithandwisdom/2.png" alt="Spanish Wit and Wisdom App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

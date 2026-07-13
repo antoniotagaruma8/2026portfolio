@@ -1,0 +1,138 @@
+---
+title: "Debate Spark"
+subtitle: "Interactive Local-Multiplayer Debate Engine"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript"]
+link: "https://debate-lovat.vercel.app"
+github: "https://github.com/antoniotagaruma8/debate"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Debate Spark</strong> is a dynamic, interactive web application designed to generate engaging, age-appropriate debate topics for teenagers (ages 13-18). Built with a focus on high-fidelity UI/UX and gamified mechanics, the platform serves as an educational tool that makes practicing critical thinking, argumentation, and public speaking highly engaging. 
+
+With its single-frame layout, vibrant design tokens, and fluid micro-animations, Debate Spark transforms a traditional classroom or group activity into an energetic, fast-paced competition.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Lightbulb className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Promote Critical Thinking</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Provide a curated list of thought-provoking topics ranging from daily teen dilemmas to complex ethical questions.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Gamepad2 className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Gamify Education</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Implement game-like mechanics such as a randomized "Spin Sides" feature, score tracking, win streaks, and dynamic timers to keep users engaged.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Accessibility & Clarity</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Offer instant explanations and argument hints ("FOR" and "AGAINST" perspectives) to ensure all users can confidently participate.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Core Features</h2>
+
+The application is structured around a fast-paced game loop featuring the following mechanics:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Dynamic Topic Generation</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A randomized engine serves over 40 curated topics, guaranteeing no repeats until all prompts have been exhausted. A visual "Spice Meter" (🌶️) indicates the controversy and complexity level.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">"Spin Sides" Randomizer</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A rapid-switching visual randomizer fairly assigns "FOR" and "AGAINST" stances to competing teams, complete with quick-reference hints.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Interactive Timer & Drama Mode</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A visual SVG ring timer with customizable presets (30s, 1m, 2m, 3m). In the final 10 seconds, it triggers a "Drama Mode" with red visual cues and ticking sound effects to build tension.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Score Tracking & Win Streaks</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Persistent scorekeeping for both teams, featuring celebratory confetti, sound effects, and a dynamic banner for consecutive win streaks.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">Frontend Architecture</h3>
+
+Debate Spark is developed as a lightweight, highly performant Vanilla web application:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Core Stack</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    HTML5, CSS3, and Vanilla JavaScript (ES6+), ensuring instantaneous load times without heavy framework overhead.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Design System</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Custom CSS featuring variables for cohesive theming, modern typography (Outfit & Space Grotesk via Google Fonts), and a responsive flex/grid single-frame layout.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Animation Engine</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    CSS-driven micro-animations including flipping cards, pulsating buttons, floating background particles, and JavaScript-triggered DOM elements for confetti and sparkles.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Audio Management</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A dedicated modular `sounds.js` script handles HTML5 audio instantiation for responsive auditory feedback (buzzers, timer ticking, victory chimes).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Value Proposition & Use Cases</h2>
+
+Whether deployed in a formal classroom setting, an ESL/EFL environment, or a youth group activity, Debate Spark provides immediate value by removing the friction of organizing a debate. The integrated keyboard shortcuts (`Space` to generate, `T` to toggle timer, `S` to spin sides) allow educators to act as seamless game-show hosts. By synthesizing high-end UI design with essential speech communication practice, the platform proves that academic rigor and gamified engagement can coexist beautifully.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/debate-spark/1.png" alt="Debate Spark App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/debate-spark/2.png" alt="Debate Spark App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

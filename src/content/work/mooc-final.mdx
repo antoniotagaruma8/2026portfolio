@@ -1,0 +1,86 @@
+---
+title: "The Philippine Education System"
+subtitle: "MOOC Final Project Presentation"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript", "CSS Grid"]
+link: "https://vercel.com/antonios-projects-3565a924/mooc-final-project"
+github: "https://github.com/antoniotagaruma8/MOOCFinalProject"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+The <strong>Philippine Education System</strong> presentation is an interactive, web-based educational tool developed as a final project for a Massive Open Online Course (MOOC). Foregoing traditional, static slide decks, this project utilizes a custom-built web interface to deliver a dynamic, engaging, and culturally rich overview of the educational landscape in the Philippines.
+
+Designed with an international audience in mind (specifically providing comparative context to the Spanish educational system, such as aligning Senior High School with <em>Bachillerato</em>), the presentation navigates through the structural evolution of the country's system, its bilingual policies, embedded values, and the resilience of its students amidst socio-economic challenges.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Custom Presentation Engine</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>A bespoke, lightweight slide navigation system built from scratch using Vanilla JavaScript. It supports intuitive keyboard controls and dedicated UI navigation buttons for accessibility.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Dynamic Visual Design</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Features a modern, responsive card-based layout inspired by bento-grid aesthetics and incorporates an animated, CSS-driven "blob" background to create a vibrant visual atmosphere.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Rich Cultural Immersion</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Uses highly relevant visual assets, iconography, and contextual examples to highlight unique Filipino cultural traits such as the Mano Po gesture, Buwan ng Wika, and Classroom Cleaners.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & Features</h2>
+
+The project is built on a robust, dependency-free frontend stack to ensure maximum performance and cross-platform portability:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Semantic HTML5</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Semantic markup structures the presentation flow (`<section class="slide">`) and organizes complex information into digestible content grids.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Responsive CSS3 Styling</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Extensive use of CSS Grid and Flexbox to ensure the card arrangements adapt seamlessly to different screen sizes. Utilizes CSS variables for consistent theming and smooth transitions for slide states (`.active`, `.past`, `.future`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Vanilla JS Logic</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Handles state management for the current slide index, executes DOM manipulation to toggle slide visibility classes, and binds global event listeners for seamless keyboard and mouse interactions.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Research Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+---
+title: "LoanWord Detectives"
+subtitle: "Etymological Drag-and-Drop Exploration"
+tech: ["HTML5 Drag and Drop API", "CSS3", "Vanilla JavaScript"]
+link: "https://loan-word-detectives.vercel.app"
+github: "https://github.com/antoniotagaruma8/LoanWordDetectives"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>LoanWord Detectives</strong> is an interactive, gamified drag-and-drop educational tool designed to help learners explore the etymological origins of Filipino (Tagalog) vocabulary. By taking on the role of "detectives," students analyze linguistic "evidence cards" and categorize words into three historical origins: Indigenous (Austronesian), Spanish, and English. 
+
+The application combines fast-paced sorting mechanics, real-time feedback, and competitive team modes to transform historical linguistics and vocabulary acquisition into an engaging classroom or solo activity.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Etymological Awareness</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Helps students recognize the historical influences on the modern Filipino language by identifying common loanwords and their root languages.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Cognitive Agility</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>The time-pressured environment encourages rapid recall and pattern recognition based on phonetic and structural characteristics of the words.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Collaborative Learning</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Multi-team modes foster communication, debate, and consensus-building as groups work together to classify ambiguous words under time pressure.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Gamification Mechanics</h2>
+
+The application transforms rote vocabulary sorting into an active learning experience:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Dynamic Batch Dealing</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    To prevent screen crowding, the engine serves "evidence cards" in batches of 5. New cards are automatically dealt only when the current pile is cleared, managing cognitive load.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Instant Feedback Loop</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Correct placement generates a green floating "+100" text animation and locks the card in place. Incorrect placement triggers a red floating "-20" penalty and a visual "shake" animation, returning the card to the active state.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Multiplayer Modes & Time-Attack</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Supports "Solo Mission" alongside 2, 3, or 4-team competitive modes. Features a countdown timer that visually stresses (turns red) during the final 10 seconds to increase engagement.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & Scalability</h2>
+
+The application is built as a lightweight, client-side, single-page application (SPA), ensuring rapid loading and zero latency during gameplay.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Core Mechanics</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utilizes the native HTML5 Drag and Drop API (`dragstart`, `dragover`, `drop`) for seamless, intuitive interaction.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">State Management</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Pure JavaScript handles complex game states, including turn-based logic for up to 4 teams, real-time score tracking, timer countdowns, and dynamic DOM updates.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Future Scalability</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Because of its modular data structure, the core engine can easily be adapted for different target languages, parts of speech sorting, grammatical categorizations, or integrated with a backend database to pull dynamic word lists based on user difficulty levels.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/loan-word/1.png" alt="Loan Word Detectives App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/loan-word/2.png" alt="Loan Word Detectives App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

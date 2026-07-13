@@ -1,0 +1,167 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* --- Colors: GitHub Dark + Teal Accent --- */
+  --color-background: #0d1117;
+  --color-foreground: #e6edf3;
+  --color-card: #1c2128;
+  --color-border: #30363d;
+  --color-muted: #1c2128;
+  --color-muted-foreground: #7d8590;
+  
+  /* Accents */
+  --color-accent-teal: #64f4ac;
+  --color-accent-blue: #58a6ff;
+
+  /* Specific Badge Backgrounds */
+  --color-badge-teal-bg: #132d21;
+  --color-badge-teal-border: #1e4a32;
+  --color-badge-blue-bg: #0d1f3c;
+  --color-badge-blue-border: #1a3555;
+
+  /* --- Typography --- */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-foreground)] antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Mockup specific utility classes */
+  
+  .nav-item {
+    @apply flex items-center gap-3 px-2 py-2 rounded-md cursor-pointer transition-colors text-sm text-muted-foreground font-medium;
+  }
+  .nav-item:hover, .nav-item.active {
+    @apply bg-card text-accent-teal;
+  }
+  .nav-item.nav-item-blue:hover, .nav-item.nav-item-blue.active {
+    @apply text-accent-blue;
+  }
+  .nav-item.nav-item-amber:hover, .nav-item.nav-item-amber.active {
+    @apply text-amber-500;
+  }
+  .nav-dot {
+    @apply w-[6px] h-[6px] rounded-full bg-current shrink-0 transition-all duration-200;
+  }
+  .nav-item.active .nav-dot {
+    @apply w-8 rounded-[3px];
+  }
+
+  .badge {
+    @apply text-xs px-3 py-1 rounded-full font-medium tracking-[0.3px] border;
+  }
+  .badge-teal {
+    @apply bg-[var(--color-badge-teal-bg)] text-accent-teal border-[var(--color-badge-teal-border)];
+  }
+  .badge-blue {
+    @apply bg-[var(--color-badge-blue-bg)] text-accent-blue border-[var(--color-badge-blue-border)];
+  }
+  .badge-gray {
+    @apply bg-card text-muted-foreground border-border;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold text-accent-teal tracking-[2px] uppercase mb-6 flex items-center gap-4;
+  }
+  .section-label::after {
+    @apply content-[''] flex-1 h-[0.5px] bg-border;
+  }
+
+  .exp-item {
+    @apply flex flex-col md:flex-row gap-2 md:gap-4 p-4 rounded-lg transition-colors cursor-pointer border border-transparent;
+  }
+  .exp-item:hover {
+    @apply bg-card border-border;
+  }
+
+  .proj-card {
+    @apply bg-card border border-border rounded-lg p-5 cursor-pointer transition-all duration-200;
+  }
+  .proj-card:hover {
+    @apply border-accent-teal -translate-y-[2px];
+  }
+  
+  .etag {
+    @apply text-xs px-2.5 py-0.5 bg-[var(--color-badge-teal-bg)] text-accent-teal rounded-full;
+  }
+  .etag-b {
+    @apply bg-[var(--color-badge-blue-bg)] text-accent-blue;
+  }
+
+  .stag {
+    @apply text-xs px-2 py-0.5 bg-background text-muted-foreground border border-border rounded-md;
+  }
+  
+  .sp {
+    @apply inline-flex items-center text-xs px-2.5 py-1.5 rounded-md bg-card text-foreground border border-border transition-colors cursor-default hover:border-accent-teal/30;
+  }
+
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Surprise Me Feature */
+  .hacker-mode {
+    font-family: var(--font-fira), monospace !important;
+    color: #64f4ac !important;
+    text-shadow: 0 0 5px #64f4ac, 0 0 10px #64f4ac;
+    animation: glitch 0.3s linear infinite;
+  }
+  .hacker-mode * {
+    color: #64f4ac !important;
+    border-color: #64f4ac !important;
+    background-color: #0d1117 !important;
+    font-family: var(--font-fira), monospace !important;
+    transition: none !important;
+  }
+  @keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+  }
+
+  .roulette-highlight {
+    animation: pulseGlow 1s ease-in-out infinite alternate !important;
+    z-index: 50;
+    position: relative;
+  }
+  @keyframes pulseGlow {
+    from {
+      box-shadow: 0 0 10px #64f4ac;
+      border-color: #64f4ac;
+      transform: scale(1.02);
+    }
+    to {
+      box-shadow: 0 0 30px #64f4ac, 0 0 60px #64f4ac;
+      border-color: #64f4ac;
+      transform: scale(1.05);
+    }
+  }
+
+  /* Hover Pan Transition */
+  .hover-pan {
+    object-position: top left;
+    transition: object-position 3.5s ease-in-out;
+  }
+  .hover-pan:hover {
+    object-position: bottom right;
+  }
+}
+

@@ -1,0 +1,116 @@
+---
+title: "Passive Voice Tug of War"
+subtitle: "Real-Time Multiplayer Classroom Game"
+tech: ["Node.js", "Socket.IO", "Express", "Vanilla JavaScript"]
+link: "https://passivevoiceactivity.vercel.app"
+github: "https://github.com/antoniotagaruma8/passivevoiceactivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Passive Voice Tug of War</strong> is an immersive, real-time multiplayer classroom game designed to help B2-level English language learners master the complexities of the Passive Voice. Operating as an interactive "Classroom Arcade" experience, the application transforms traditional grammar drills into a highly competitive, team-based digital tug of war. 
+
+Powered by a robust Node.js and Socket.IO backend, the game splits the classroom into Red and Blue teams. Students use their mobile devices as game controllers, answering time-pressured grammar questions to "pull" a digital rope in their team's direction.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Targeted Core Skills</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Solidifies understanding of Passive Voice construction across Present Simple, Past Simple, Present Perfect, Future, and Modal forms, emphasizing the shift in focus from the "doer" to the "receiver."</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Immediate Feedback</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Every interaction provides granular, context-specific rationales for both correct and incorrect choices, ensuring students understand *why* the passive voice is used in specific contexts like news headlines.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Scaffolded Learning</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Questions progress in difficulty naturally, testing identification (Active vs. Passive), grammatical transformation, and precise tense accuracy.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Gamification & Interactive Mechanics</h2>
+
+The platform features distinct gameplay phases designed to maximize student engagement and collaborative competition:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Tug of War Engine</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Live, synchronized questions are broadcast to all player devices. Correct answers from team members calculate a "pull strength" percentage, dynamically shifting a visual rope on the host screen toward the winning team.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Anti-Pattern Shuffling</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    The system automatically shuffles multiple-choice options on a per-question basis. This prevents pattern-guessing and ensures that students engage with the grammatical content.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">"Breaking News" Phase</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A specialized visual mode contextualizing the passive voice in real-world journalism. Students view AI-generated news images with active facts and must select the correct passive headline transformation.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & UI/UX</h2>
+
+The application is built using a modern, real-time web stack, optimized for instantaneous classroom interactivity and scalable deployment.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Real-Time Communication</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A Node.js and Express backend combined with Socket.IO handles high-frequency, bidirectional state synchronization between the Host dashboard and dozens of Player clients, calculating aggregated scoring and rope physics in real-time.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Deployment & Networking</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Built-in support for Fly.io Docker deployments and local Cloudflare tunneling (`cloudflared`), enabling teachers to launch a globally accessible game session directly from their localhost. Built-in QR code generation allows instant classroom onboarding.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gameshow Interface</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Features a centralized, large-screen Host Dashboard for classroom projectors that visualizes rope physics and answer percentages. Player Controllers are mobile-first with bold team colors and haptic-style feedback to reinforce learning states under automated 10-second timers.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/passive-voice/1.png" alt="Passive Voice App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/passive-voice/2.png" alt="Passive Voice App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

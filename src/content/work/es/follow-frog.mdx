@@ -1,0 +1,116 @@
+---
+title: "Follow the Frog Activity"
+subtitle: "Herramienta Interactiva de Escucha Multimodal"
+tech: ["Web Audio API", "HTML5 Canvas", "Vanilla JavaScript"]
+link: "https://follow-the-frog-activity.vercel.app"
+github: "https://github.com/antoniotagaruma8/FollowTheFrogActivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Follow the Frog</strong> es una aplicación web simplificada y gamificada adaptada para entornos de aprendizaje de ESL/EFL. Aprovecha estímulos multimodales, comenzando con un desafío de escucha solo de audio y culminando en una revelación en video, para desarrollar habilidades de procesamiento auditivo, enfoque y predicción narrativa.
+
+El proyecto cuenta con un visualizador personalizado mediante la Web Audio API que responde a la entrada de audio en tiempo real, creando una experiencia inmersiva y rica en sensaciones para los estudiantes antes de que pasen al contexto visual final.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Escucha Estructurada</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Al aislar la pista de audio en la primera fase, los estudiantes se ven obligados a depender únicamente de su comprensión auditiva e imaginación sin apoyos visuales.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Aprendizaje Multimodal</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>La transición de un estímulo de solo audio a un resultado en video se adapta a diferentes estilos de aprendizaje, recompensando el esfuerzo auditivo inicial con contexto visual.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Recursos para Docentes</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Integrada directamente en la UI, la aplicación brinda acceso rápido a materiales pedagógicos descargables (hojas de trabajo y respuestas) para una solución directa al aula.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Flujo de Experiencia del Usuario</h2>
+
+El flujo de la aplicación fomenta naturalmente la curiosidad y la anticipación a través de un mecanismo de revelación secuenciado:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Fase 1: El Reto Auditivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Se presenta a los usuarios una interfaz limpia que presenta un reproductor de audio y un visualizador en tiempo real. El botón "Go to Video" está inicialmente deshabilitado para evitar que se omita y garantizar la participación auditiva.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Activador de Interacción</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Una vez que el usuario inicia la reproducción de audio, el visualizador de la API de Web Audio se activa, proporcionando retroalimentación visual dinámica, lo que desbloquea el botón de transición.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Fase 2: La Revelación</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Hacer clic en el botón de transición pausa el audio, oculta la primera página y revela sin problemas el reproductor de video, intentando automáticamente reproducir la conclusión visual.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+La aplicación está construida como una aplicación de página única (SPA) ligera del lado del cliente utilizando tecnologías web vanilla, lo que garantiza la máxima compatibilidad y tiempos de carga rápidos.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Visualización en Tiempo Real</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza las API `AudioContext` y `AnalyserNode` en conjunto con HTML5 `<canvas>` para renderizar un gráfico de barras de frecuencia dinámico, coloreando programáticamente las barras con valores RGB temáticos de rana.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión de Medios</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los elementos nativos HTML5 `<audio>` y `<video>` se manipulan mediante listeners de eventos de JavaScript (como `play` y `onended`) para controlar el flujo de la aplicación y coordinar la revelación secuencial.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Diseño Temático</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Emplea una paleta de colores cohesiva de "rana" con fondos cian y botones de llamada a la acción en verde vibrante. CSS Flexbox centra la aplicación dentro de una tarjeta elegante y responsiva con transiciones de estado suaves.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/follow-frog/1.png" alt="Follow the Frog App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/follow-frog/2.png" alt="Follow the Frog App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

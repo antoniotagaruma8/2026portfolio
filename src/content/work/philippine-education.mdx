@@ -1,0 +1,86 @@
+---
+title: "Philippine Education System"
+subtitle: "Interactive Cultural Presentation"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript", "CSS Grid"]
+link: "https://philippineeducation.vercel.app/"
+github: "https://github.com/antoniotagaruma8/philippineeducation"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+The <strong>Philippine Education System</strong> project is a custom-built, interactive, web-based presentation designed to deliver a comprehensive overview of the educational landscape, culture, and systemic structures in the Philippines. Moving away from traditional slide decks (like PowerPoint or Google Slides), this project leverages web technologies to create a dynamic, highly customizable, and visually engaging educational tool.
+
+It provides an in-depth look into the country's K-12 revolution, bilingual language policies, deeply ingrained school culture, student life, and the unique challenges faced by the system, specifically tailored for an international audience.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Custom Presentation Engine</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>A lightweight, bespoke slide navigation system built with Vanilla JavaScript, supporting intuitive keyboard navigation and on-screen UI controls.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Dynamic Visual Design</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utilizes modern CSS techniques, including an animated blob background, clean typography, and a responsive card-based layout (bento-grid style) to present information clearly.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Integrated Script & Tracking</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Features an integrated dynamic progress bar and a meticulously timed presenter script outlining an 8–10 minute delivery complete with talking points and time allocations.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & Features</h2>
+
+Built on a streamlined, dependency-free frontend stack to ensure maximum performance and portability:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Semantic HTML5</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Structures the presentation slides using semantic `<section class="slide">` tags and content grids for logical, accessible organization.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Advanced CSS3 Styling</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Extensive use of CSS Grid and Flexbox for responsive card arrangements. Implements CSS variables for theming, smooth transitions for slide changes, and keyframe animations for the background blobs.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Vanilla JS Logic</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Manages state for the current slide index and handles DOM manipulation for class toggling (e.g., `.active`, `.past`, `.future`) to achieve seamless slide transitions and global keyboard accessibility.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Research Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+  </div>
+</div>

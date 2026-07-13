@@ -1,0 +1,131 @@
+---
+title: "Suite de Herramientas EdTech"
+subtitle: "Una Colección de Aplicaciones Web Interactivas para el Aula"
+tech: ["JavaScript", "Canvas API", "PDF.js", "Fabric.js", "Pollinations AI", "Socket.io", "Node.js", "Gemini AI"]
+github: "https://github.com/antoniotagaruma8"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+Como educador, constantemente necesitaba herramientas muy específicas para las actividades de clase—herramientas que o no existían o requerían suscripciones costosas. Para resolver esto, desarrollé un conjunto de aplicaciones ligeras basadas en el navegador, diseñadas para mejorar de inmediato la participación de los estudiantes.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+  {/* Card 1: The Problem */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">El Problema</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Los profesores necesitan herramientas inmediatas y sin fricciones. Si una aplicación requiere un largo proceso de inicio de sesión, descargas pesadas o un tutorial complejo, interrumpe el flujo de la clase.</p>
+      <p>Además, el software comercial rara vez se ajusta a las necesidades pedagógicas exactas de un entorno bilingüe o de aprendizaje de idiomas.</p>
+    </div>
+  </div>
+
+  {/* Card 2: The Solutions */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Las Soluciones</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p><strong>Editor de PDF:</strong> Creado con PDF.js y Fabric.js, permite a los profesores proyectar y dibujar sobre hojas de trabajo al instante.</p>
+      <p><strong>Juego de Debate en Tiempo Real:</strong> Plataforma gamificada con temporizadores interactivos y seguimiento de puntos para la práctica oral.</p>
+      <p><strong>Pizarra Interactiva:</strong> Pizarra blanca optimizada para funciones táctiles con Canvas API para actividades de primaria.</p>
+    </div>
+  </div>
+
+  {/* Card 3: The Outcome */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">El Resultado</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Este conjunto de herramientas ha cambiado fundamentalmente la forma en que dirijo mi clase.</p>
+      <p>Al depender de tecnologías web nativas y librerías ligeras, estas aplicaciones se cargan al instante incluso en redes escolares lentas, sirviendo como testimonio de cómo el software específico puede tener un impacto educativo enorme.</p>
+    </div>
+  </div>
+
+</div>
+
+<h2 className="section-label mt-12">Explorar las Herramientas</h2>
+
+<div className="grid grid-cols-1 gap-8">
+  {/* Tool 1 */}
+  <div className="glass-card p-6 md:p-8 rounded-3xl border flex flex-col">
+    <div className="flex items-center gap-4 mb-4">
+      <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center shrink-0">
+        <Wrench className="text-accent-teal" size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-xl text-foreground">Editor de PDF Interactivo</h3>
+        <span className="text-xs text-muted-foreground">PDF.js · Fabric.js</span>
+      </div>
+    </div>
+    <p className="text-sm text-muted-foreground mb-6">Una herramienta de anotación de hojas de trabajo en el navegador que permite a los profesores proyectar y dibujar instantáneamente sobre archivos PDF sin software costoso.</p>
+    <div className="flex flex-wrap gap-3 mt-auto">
+      <a href="/coming-soon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-accent-teal text-accent-teal hover:bg-accent-teal/10 transition-colors text-xs font-medium">Demo en Vivo <ExternalLink size={14} /></a>
+      <a href="https://github.com/antoniotagaruma8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#30363d] text-muted-foreground hover:text-foreground hover:bg-[#30363d] transition-colors text-xs font-medium">Código Fuente <Code2 size={14} /></a>
+      <a href="/es/work/pdf-editor" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-teal text-[#0d1117] hover:bg-accent-teal/90 transition-colors text-xs font-medium">Leer Caso de Estudio <BookOpen size={14} /></a>
+    </div>
+  </div>
+
+  {/* Tool 2 */}
+  <div className="glass-card p-6 md:p-8 rounded-3xl border flex flex-col">
+    <div className="flex items-center gap-4 mb-4">
+      <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+        <PlayCircle className="text-accent-blue" size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-xl text-foreground">Juego de Debate en Tiempo Real</h3>
+        <span className="text-xs text-muted-foreground">HTML/CSS · Web Audio API</span>
+      </div>
+    </div>
+    <p className="text-sm text-muted-foreground mb-6">Una plataforma gamificada con temporizadores interactivos, seguimiento de puntos y efectos de sonido para una práctica dinámica de inglés oral.</p>
+    <div className="flex flex-wrap gap-3 mt-auto">
+      <a href="https://debate-lovat.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-accent-teal text-accent-teal hover:bg-accent-teal/10 transition-colors text-xs font-medium">Demo en Vivo <ExternalLink size={14} /></a>
+      <a href="https://github.com/antoniotagaruma8/debate" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#30363d] text-muted-foreground hover:text-foreground hover:bg-[#30363d] transition-colors text-xs font-medium">Código Fuente <Code2 size={14} /></a>
+      <a href="/es/work/debate-spark" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-teal text-[#0d1117] hover:bg-accent-teal/90 transition-colors text-xs font-medium">Leer Caso de Estudio <BookOpen size={14} /></a>
+    </div>
+  </div>
+
+  {/* Tool 3 */}
+  <div className="glass-card p-6 md:p-8 rounded-3xl border flex flex-col">
+    <div className="flex items-center gap-4 mb-4">
+      <div className="w-12 h-12 rounded-2xl bg-purple-400/10 flex items-center justify-center shrink-0">
+        <PenTool className="text-purple-400" size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-xl text-foreground">Pizarra Interactiva de Dibujo</h3>
+        <span className="text-xs text-muted-foreground">Canvas API · PointerEvents</span>
+      </div>
+    </div>
+    <p className="text-sm text-muted-foreground mb-6">Una pizarra blanca optimizada para uso táctil diseñada para pizarras inteligentes, que permite a los estudiantes de primaria interactuar sin retraso de entrada.</p>
+    <div className="flex flex-wrap gap-3 mt-auto">
+      <a href="/coming-soon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-accent-teal text-accent-teal hover:bg-accent-teal/10 transition-colors text-xs font-medium">Demo en Vivo <ExternalLink size={14} /></a>
+      <a href="https://github.com/antoniotagaruma8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#30363d] text-muted-foreground hover:text-foreground hover:bg-[#30363d] transition-colors text-xs font-medium">Código Fuente <Code2 size={14} /></a>
+      <a href="/es/work/interactive-drawing" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-teal text-[#0d1117] hover:bg-accent-teal/90 transition-colors text-xs font-medium">Leer Caso de Estudio <BookOpen size={14} /></a>
+    </div>
+  </div>
+
+  {/* Tool 4 */}
+  <div className="glass-card p-6 md:p-8 rounded-3xl border flex flex-col">
+    <div className="flex items-center gap-4 mb-4">
+      <div className="w-12 h-12 rounded-2xl bg-orange-400/10 flex items-center justify-center shrink-0">
+        <Gamepad2 className="text-orange-400" size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-xl text-foreground">Bingo de Trivia Educativa</h3>
+        <span className="text-xs text-muted-foreground">Node.js · Socket.io · Gemini AI</span>
+      </div>
+    </div>
+    <p className="text-sm text-muted-foreground mb-6">Un juego de Bingo multijugador en tiempo real que utiliza Google Gemini para generar automáticamente preguntas y explicaciones de trivia alineadas con el plan de estudios para la evaluación en clase.</p>
+    <div className="flex flex-wrap gap-3 mt-auto">
+      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#30363d] text-muted-foreground/50 bg-[#0d1117]/50 text-xs font-medium cursor-not-allowed" title="Próximamente">Demo en Vivo (Pronto) <ExternalLink size={14} /></span>
+      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#30363d] text-muted-foreground/50 bg-[#0d1117]/50 text-xs font-medium cursor-not-allowed" title="Próximamente">Código Fuente (Pronto) <Code2 size={14} /></span>
+      <a href="/es/work/trivia-bingo" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent-teal text-[#0d1117] hover:bg-accent-teal/90 transition-colors text-xs font-medium">Leer Caso de Estudio <BookOpen size={14} /></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+---
+title: "Passive Voice Tug of War"
+subtitle: "Juego de Aula Multijugador en Tiempo Real"
+tech: ["Node.js", "Socket.IO", "Express", "Vanilla JavaScript"]
+link: "https://passivevoiceactivity.vercel.app"
+github: "https://github.com/antoniotagaruma8/passivevoiceactivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Passive Voice Tug of War</strong> es un juego inmersivo de aula multijugador en tiempo real diseñado para ayudar a los estudiantes de inglés de nivel B2 a dominar las complejidades de la Voz Pasiva. Funcionando como una experiencia interactiva de "Aula Arcade", la aplicación transforma los ejercicios tradicionales de gramática en un juego de la soga digital, altamente competitivo y basado en equipos.
+
+Impulsado por un robusto backend de Node.js y Socket.IO, el juego divide la clase en equipos Rojo y Azul. Los estudiantes usan sus dispositivos móviles como controles de juego, respondiendo preguntas de gramática bajo presión de tiempo para "tirar" de una cuerda digital en dirección a su equipo.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Habilidades Básicas Específicas</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Solidifica la comprensión de la construcción de la Voz Pasiva a través del Presente Simple, Pasado Simple, Presente Perfecto, Futuro y formas Modales, enfatizando el cambio de enfoque del "hacedor" al "receptor".</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Feedback Inmediato</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cada interacción proporciona explicaciones detalladas y específicas del contexto tanto para opciones correctas como incorrectas, asegurando que los estudiantes entiendan *por qué* se usa la voz pasiva en contextos específicos como los titulares de noticias.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Aprendizaje Estructurado</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Las preguntas progresan en dificultad de forma natural, evaluando la identificación (Activa vs. Pasiva), la transformación gramatical y la precisión exacta del tiempo verbal.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Mecánicas de Gamificación e Interactividad</h2>
+
+La plataforma presenta distintas fases de juego diseñadas para maximizar el compromiso de los estudiantes y la competencia colaborativa:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Motor del Juego de la Soga</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Preguntas en vivo y sincronizadas se transmiten a todos los dispositivos de los jugadores. Las respuestas correctas de los miembros del equipo calculan un porcentaje de "fuerza de tracción", moviendo dinámicamente una cuerda visual en la pantalla principal hacia el equipo ganador.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Mezcla de Anti-Patrones</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    El sistema mezcla automáticamente las opciones de respuestas múltiples en cada pregunta. Esto evita la adivinanza de patrones y garantiza que los estudiantes interactúen con el contenido gramatical.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Fase "Noticias de Última Hora"</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un modo visual especializado que contextualiza la voz pasiva en el periodismo del mundo real. Los estudiantes ven imágenes de noticias generadas por IA con hechos activos y deben seleccionar la transformación de titular pasivo correcta.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica y UI/UX</h2>
+
+La aplicación se construyó utilizando un stack web moderno y en tiempo real, optimizado para la interactividad instantánea en el aula y una implementación escalable.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Comunicación en Tiempo Real</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un backend de Node.js y Express combinado con Socket.IO maneja la sincronización de estado bidireccional y de alta frecuencia entre el panel del anfitrión y docenas de clientes, calculando la puntuación agregada y la física de la cuerda en tiempo real.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Despliegue y Redes</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Soporte incorporado para despliegues en Docker a través de Fly.io y túneles locales de Cloudflare (`cloudflared`), lo que permite a los profesores iniciar una sesión de juego accesible globalmente directamente desde su localhost. La generación incorporada de códigos QR permite el acceso instantáneo de la clase.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Interfaz de Programa de Juegos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Cuenta con un Panel de Anfitrión centralizado de pantalla grande para proyectores del aula que visualiza la física de la cuerda y los porcentajes de respuestas. Los controles de los jugadores priorizan los dispositivos móviles con colores llamativos de los equipos y comentarios de estilo háptico para reforzar los estados de aprendizaje bajo temporizadores automáticos de 10 segundos.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/passive-voice/1.png" alt="Passive Voice App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/passive-voice/2.png" alt="Passive Voice App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

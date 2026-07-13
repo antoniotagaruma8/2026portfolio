@@ -1,0 +1,56 @@
+---
+title: "Interactive PDF Editor"
+subtitle: "Browser-Based Worksheet Annotation"
+tech: ["HTML5", "Canvas API", "PDF.js", "Fabric.js"]
+github: "https://github.com/antoniotagaruma8"
+link: "/en/coming-soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Interactive PDF Editor</strong> is a lightweight, zero-installation browser tool engineered specifically for educators. By combining Mozilla's PDF.js for rendering and Fabric.js for drawing, the application allows teachers to instantly project and dynamically annotate PDF worksheets over a smartboard, eliminating the need for expensive proprietary software.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Instant Rendering</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utilizes PDF.js to parse and render high-fidelity PDF documents directly within the browser's Canvas, ensuring zero-latency startup times crucial for maintaining classroom flow.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Dynamic Annotation</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Layers a transparent Fabric.js canvas over the document, equipping teachers with digital pens, highlighters, and text insertion tools for real-time worksheet demonstration.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Client-Side Only</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>All processing is handled entirely on the client's machine, meaning no sensitive student materials or copyrighted exams are ever uploaded to an external server.</p>
+    </div>
+  </div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Platform Preview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+  </div>
+</div>
+
+

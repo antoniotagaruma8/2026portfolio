@@ -1,0 +1,112 @@
+---
+title: "Conditionals Master"
+subtitle: "Gamificación Interactiva de Gramática"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript"]
+link: "https://conditionals-game.vercel.app"
+github: "https://github.com/antoniotagaruma8/ConditionalsGame"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Conditionals Master</strong> es una aplicación web educativa interactiva de alta fidelidad diseñada para dominar las estructuras condicionales en inglés. A través de atractivas mecánicas de gamificación y un contenido exhaustivo, la plataforma transforma el tema gramatical de las condicionales, a menudo desafiante, en una experiencia de aprendizaje dinámica e intuitiva.
+
+El ciclo principal del juego—"¡Empareja el IF con el THEN!"—se complementa con modos de juego colaborativos y soporte lingüístico integrado.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Plan de Estudios Completo</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cubre más de 250 preguntas únicas en condicionales Cero, Primero, Segundo, Tercero y Mixto, junto con escenarios específicos de "I Wish / If Only".</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Identificación de Tipos</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>En el modo "Random Mix", los usuarios no solo emparejan cláusulas, sino que también identifican el tipo de condicional específico utilizado, reforzando la comprensión gramatical.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Soporte Lingüístico</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cuenta con herramientas contextuales que explican *por qué* un tipo específico es correcto y una burbuja de diccionario integrada para asistencia con el vocabulario.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Modos de Juego y Mecánicas</h2>
+
+La aplicación presenta diversos modos gamificados adecuados para el estudio independiente y el aula:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Modo Clásico</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los alumnos conectan la cláusula "If" (Si) con su conclusión lógica "Then" (Entonces). Presenta progresión gamificada con barras de progreso dinámicas, contadores de rachas (🔥) e insignias multiplicadoras, junto con feedback estilo arcade (puntos flotantes, confeti).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Story Sparks</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un modo colaborativo perfecto para la práctica oral en clase. Los estudiantes terminan oraciones usando vocabulario proporcionado ("sparks") o su propia imaginación, creando una cadena de historias en la que el siguiente estudiante comienza su oración usando la consecuencia anterior.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+El proyecto está construido como una aplicación web vanilla ligera y altamente responsiva, asegurando máxima compatibilidad y tiempos de carga rápidos.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend y Estilos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza HTML5, CSS3 y Vanilla JavaScript con un UI/UX moderno que presenta glassmorfismo, transiciones suaves, insignias en forma de píldora y fuentes de Google personalizadas (`Nunito`). Diseño totalmente responsivo adaptado para móviles, tablets y ordenadores de sobremesa.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión del Estado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Una estructura de datos modular (`data.js`) separa el contenido de la lógica, lo que permite la manipulación dinámica del DOM para inyectar preguntas, opciones y calcular puntajes sobre la marcha (`script.js`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Integraciones de Terceros</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Mantiene las dependencias al mínimo, integrando únicamente `canvas-confetti` para celebraciones de partículas pulidas y de alto rendimiento en la pantalla de resultados.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Impacto y Casos de Uso</h2>
+
+Conditionals Master acorta la brecha entre la memorización gramatical de memoria y el uso activo y atractivo. Para los profesores, sirve como una herramienta lista para usar en sesiones de pizarra interactiva. Para los estudiantes, proporciona una plataforma visualmente gratificante para practicar estructuras gramaticales complejas hasta que se vuelvan intuitivas. Como proyecto de desarrollo, se erige como una muestra limpia de la gestión de estado de Vanilla JavaScript y el renderizado dinámico de la interfaz de usuario sin la sobrecarga de frameworks pesados.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/conditionals-game/1.png" alt="Conditionals Game App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/conditionals-game/2.png" alt="Conditionals Game App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

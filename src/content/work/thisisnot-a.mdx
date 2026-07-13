@@ -1,0 +1,128 @@
+---
+title: "This is not a..."
+subtitle: "Interactive Digital Drawing Board & Speaking Game"
+tech: ["HTML5 Canvas", "CSS3", "Vanilla JavaScript"]
+link: "https://thisisnot-a.vercel.app/"
+github: "https://github.com/antoniotagaruma8/thisisnot-a-"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>This is not a...</strong> is a dynamic, browser-based interactive application designed for engaging group activities, educational gamification, and creative presentations. At its core, the application is a digital drawing board where users are prompted to sketch randomized objects. 
+
+However, it elevates the standard drawing experience by introducing a high-pressure "Presentation Mode" requiring users to incorporate randomized vocabulary words into a timed speech, making it an excellent tool for language learning, icebreakers, or farewell events.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <PenTool className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Interactive Drawing Engine</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Features a responsive HTML5 Canvas drawing board supporting both mouse and touch inputs, complete with a customized tool palette (colors, stroke sizes, eraser).</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Gamepad2 className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Gamified Prompts</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Prompts users to draw from a bank of over 50 predefined items (e.g., 🍌 Banana, 🚀 Rocket), accompanied by visual emoji cues and celebratory confetti animations.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Presentation Mode</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Initiating the "Present!" mode overlays a 30-second countdown timer and generates 3 random vocabulary words that must be incorporated into a timed speech.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Secret Farewell Sequence</h2>
+
+Hidden within the platform is a specialized Easter Egg designed for closing remarks or concluding an event:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">The Trigger</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A subtle button (✨) triggers a two-stage emotional sequence, explicitly designed for farewells.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Stage 1</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Clears the canvas and alters the header prompt to: <em>"This is not a Goodbye 👋, this is..."</em>
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Stage 2</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Delivers the final message: <em>"...a see you around! ❤️"</em> accompanied by an extended, celebratory confetti animation.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The application is built using a lightweight, frontend-only tech stack, ensuring rapid load times and universal browser compatibility.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend Structure</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Clean, semantic HTML5 markup integrating the 'Outfit' font family and a third-party Confetti library (`canvas-confetti`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Styling & Glassmorphism</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Employs a premium Glassmorphism aesthetic featuring blurred backgrounds and translucent borders. The fully responsive design adapts its tool panel and canvas layout for mobile viewports using CSS variables.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">State & Logic</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Handles drawing states, tool selection, and random generation logic without external frameworks. Implements custom resize logic to ensure the canvas drawing coordinates remain accurate across different screen sizes.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Web Audio API</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Synthesizes custom sound effects dynamically (Pop, Tick, Chime), eliminating the need for external audio file assets.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Value Proposition</h2>
+
+<strong>This is not a...</strong> acts as a powerful educational utility. The presentation mode forces users to construct sentences on the fly using targeted vocabulary, bridging the gap between creative expression and linguistic fluency. It also serves as an excellent low-stakes icebreaker where users can showcase their creativity and public speaking skills.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/thisisnot-a/1.png" alt="This is not a App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/thisisnot-a/2.png" alt="This is not a App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+---
+title: "Follow the Frog Activity"
+subtitle: "Interactive Multi-Modal Listening Tool"
+tech: ["Web Audio API", "HTML5 Canvas", "Vanilla JavaScript"]
+link: "https://follow-the-frog-activity.vercel.app"
+github: "https://github.com/antoniotagaruma8/FollowTheFrogActivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Follow the Frog</strong> is a streamlined, gamified web application tailored for ESL/EFL learning environments. It leverages multi-modal inputs—beginning with an audio-only listening challenge and culminating in a video reveal—to build auditory processing skills, focus, and narrative prediction. 
+
+The project features a custom Web Audio API visualizer that responds to the audio input in real-time, creating an engaging, sensory-rich experience for students before they transition to the final visual context.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Scaffolded Listening</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>By isolating the audio track in the first phase, students are forced to rely solely on their auditory comprehension and imagination without visual crutches.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Multi-Modal Learning</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>The transition from an audio-only input to a video output accommodates different learning styles, rewarding the initial listening effort with visual context.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Teacher-Ready Resources</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Integrated directly into the UI, the application provides quick access to downloadable pedagogical materials (worksheets and answer keys) for a plug-and-play classroom solution.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">User Experience Flow</h2>
+
+The application flow naturally fosters curiosity and anticipation through a sequenced reveal mechanism:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Phase 1: Audio Challenge</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Users are presented with a clean interface featuring an audio player and a real-time visualizer. The "Go to Video" button is initially disabled to prevent skipping and ensure auditory engagement.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Engagement Trigger</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Once the user initiates the audio playback, the Web Audio API visualizer activates, providing dynamic visual feedback, which unlocks the transition button.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Phase 2: Video Reveal</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Clicking the transition button pauses the audio, hides the first page, and seamlessly reveals the video player, automatically attempting to play the visual conclusion.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The application is built as a lightweight, client-side single-page application (SPA) using vanilla web technologies, ensuring maximum compatibility and fast load times.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Real-Time Audio Visualization</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utilizes the `AudioContext` and `AnalyserNode` APIs in tandem with HTML5 `<canvas>` to render a dynamic frequency bar graph, programmatically coloring the bars with frog-themed RGB values.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Media Handling</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Native HTML5 `<audio>` and `<video>` elements are manipulated via JavaScript event listeners (like `play` and `onended`) to control the application flow and coordinate the sequential reveal.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Thematic Design</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Employs a cohesive "frog" color palette with cyan backgrounds and vibrant green call-to-action buttons. CSS Flexbox centers the application within a sleek, responsive card with smooth state transitions.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/follow-frog/1.png" alt="Follow the Frog App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/follow-frog/2.png" alt="Follow the Frog App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

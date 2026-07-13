@@ -1,0 +1,160 @@
+---
+title: "Carta Clara BOS"
+subtitle: "Hardware-Enabled SaaS Operating System for Restaurants"
+tech: ["Next.js 14", "Supabase", "Stripe", "Groq AI", "jsPDF"]
+link: "/en/coming-soon"
+github: "/en/coming-soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Carta Clara</strong> is a comprehensive Business Growth Operating System (BOS) engineered exclusively for the restaurant industry. Operating on a unique <strong>Hardware-Enabled SaaS</strong> model, it provides venues with a complete ecosystem encompassing both custom software and configured hardware. This dual approach ensures high operational dependence and stickiness, directly linking the platform to the restaurant's daily revenue generation and management.
+
+Designed to eliminate upfront risk for the provider, the business model secures positive cash flow from Day 1 through an upfront hardware purchase by the client, followed by a dynamic, escalating subscription tier designed to maximize Customer Lifetime Value (CLV).
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">The Ordering Engine</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Features a digital KDS loop, visual pairing algorithms for automated upselling, dynamic pricing displays (Happy Hour triggers), and comprehensive allergen filtering.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Staff Motivation & Operations</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Introduces waiter gamification, live tip transparency, and a strict chain-of-custody service timeline to optimize floor operations.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Marketing & Retention Hub</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Integrates one-tap VIP Club opt-ins, smart "Review Traps" redirecting positive feedback to Google Maps, and WhatsApp broadcast list generation (VCF exports).</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-amber-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <ShieldCheck className="text-amber-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-amber-500 transition-colors">God-Mode Super Admin</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>A centralized provisioning hub featuring asset tracking (Hardware Allocator), a digital filing cabinet for executed contracts, and a global kill switch for subscription management.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The platform is built on a high-performance, modern tech stack designed for operational resilience, scalability, and seamless user experiences across various touchpoints.
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">1. Front-End (Next.js & React)</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Framework</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Next.js 14 (App Router) for robust server-side rendering and static site generation, ensuring lightning-fast load times for guest-facing digital menus.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Styling & UI</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Tailwind CSS coupled with a dynamic Theme Registry system for hot-swapping brand identities per restaurant.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Operational UI</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Specialized interfaces including a clean Grid View for Kitchen Display Systems (KDS), Waiter Gamification Leaderboards, and an intelligent Manager Dashboard.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">2. Back-End & Infrastructure (Supabase)</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Database & Auth</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Powered by Supabase for secure, role-based access control (Super Admin, Manager, Staff, Guest).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Data & Storage</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Real-time PostgreSQL database management for live KDS loops (Pending -> Cooking -> Ready -> Served) and robust cloud storage for digital document filing and auto-archiving.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Compliance & Security</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Built-in anti-theft audit logs, "Hacienda Safe" proforma logic, and strict GDPR-compliant data handling.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">3. Integrations & AI Engine</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Payments & Billing</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Stripe integration driving the subscription engine, handling the initial "Partner Contract" billing and the automated escalation to premium tiers in Year 2.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Communications</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Resend integration for automated transactional emails and marketing broadcasts.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Artificial Intelligence (Groq)</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed space-y-2">
+    <p><strong>Smart Waiter:</strong> An AI-driven chat assistant for guests utilizing RAG (Retrieval-Augmented Generation) on the restaurant's specific menu.</p>
+    <p><strong>AI CFO:</strong> A business intelligence tool for managers that generates strategic reports based on P&L data and venue heatmaps.</p>
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Legal Tech</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Client-side PDF generation using `jspdf` for dynamic, timestamped contract creation with IP logging.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Value Proposition</h2>
+
+<strong>Carta Clara</strong> is not just a digital menu; it is an aggressive revenue-expansion tool for restaurants. By combining operational necessity (KDS, Ordering) with advanced growth mechanics (AI Upselling, CRM, Staff Gamification), the platform embeds itself deeply into the client's business. 
+
+For the platform owner, the "Partner Contract" model ensures zero hardware risk, immediate profitability, and an automated path to high MRR (Monthly Recurring Revenue) as clients transition into the long-term growth phase. It is a premium, enterprise-grade solution built for maximum retention and scalable deployment.
+
+<AutoScreenshotGallery fallback1="/images/carta-clara/1.png" fallback2="/images/carta-clara/2.png" />

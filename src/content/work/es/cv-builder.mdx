@@ -1,0 +1,187 @@
+---
+title: "AI CV Builder"
+subtitle: "Plataforma Inteligente de Optimización de Currículums"
+tech: ["Next.js 16", "Supabase", "Stripe", "Gemini API", "Tailwind CSS v4"]
+link: "/es/coming-soon"
+github: "/es/coming-soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>CV Builder</strong> es una plataforma de software como servicio (SaaS) full-stack y premium, diseñada para automatizar y optimizar la creación de currículums profesionales utilizando Inteligencia Artificial. Construida como un micro-SaaS basado en créditos, la plataforma permite a los usuarios adaptar dinámicamente sus CVs a descripciones de puestos específicos, superando los sistemas de seguimiento de candidatos (ATS) y maximizando su potencial de contratación.
+
+La aplicación cuenta con una interfaz de alta fidelidad, con un tema oscuro ultramoderno inspirado en el sistema de diseño "Google Antigravity". Destaca por una experiencia de usuario (UX) profesional y de alta gama, caracterizada por el glassmorfismo, diseños fluidos y tokens de movimiento suaves.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  {/* Card 1 */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Optimización Inteligente</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utiliza la API de Gemini para analizar descripciones de trabajos objetivo y reescribir viñetas, resaltar habilidades relevantes y optimizar el CV para los ATS (Applicant Tracking Systems).</p>
+    </div>
+  </div>
+  {/* Card 2 */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Arquitectura Premium</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Presenta una arquitectura Next.js altamente modular y basada en componentes, estilizada con el sistema de diseño Google Antigravity, utilizando tokens de movimiento avanzados y glassmorfismo en modo oscuro.</p>
+    </div>
+  </div>
+  {/* Card 3 */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Exportación Local</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Aprovecha jsPDF para la generación de PDF del lado del cliente sin latencia, lo que garantiza que los datos del usuario permanezcan seguros y los documentos estén disponibles al instante para su descarga.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+La plataforma está construida sobre un stack tecnológico moderno y robusto que prioriza el rendimiento, la seguridad y la experiencia del desarrollador.
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">1. Front-End (Next.js y React)</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Framework</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Next.js 16 (App Router) con React 19.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estilos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Tailwind CSS v4 combinado con módulos CSS personalizados (`.module.css`) para imponer tokens de diseño estrictos impulsados por componentes.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Iconografía</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    `@tabler/icons-react` para iconografía SVG coherente y de alta calidad.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Características Clave</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Server Components para cargas iniciales rápidas, interactividad dinámica en el cliente y enrutamiento avanzado (ej. diseños de panel protegidos, pasos de incorporación dinámicos).
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">2. Back-End e Infraestructura (Supabase)</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Base de Datos y Auth</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integrado con `@supabase/supabase-js` para una autenticación de usuario segura y fluida (Magic Links/OAuth) y gestión de bases de datos PostgreSQL.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Arquitectura de Datos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Almacena de forma segura perfiles de usuario, historial de análisis, activos de CV generados y saldos de créditos en tiempo real.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Edge Computing</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza Next.js Server Actions y Route Handlers para comunicarse de forma segura con Supabase y las API de IA sin exponer los secretos al cliente.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">3. Motor de Monetización (Stripe)</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Procesamiento de Pagos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integrado con `stripe` (v22+) para manejar suscripciones y recargas de crédito únicas de forma segura.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Modelo de Negocio</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Opera con un flujo de trabajo basado en créditos: los usuarios consumen créditos para realizar tareas de adaptación de IA de alta computación (ej. reescribir viñetas, extraer palabras clave, dar formato a roles objetivo).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">UI/UX y Sistema de Diseño ("Google Antigravity")</h2>
+
+La interfaz es un diferenciador importante, abandonando las plantillas SaaS genéricas en favor de una experiencia inmersiva y a medida:
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Modo Oscuro Nativo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Temas oscuros profundos y saturados que reducen la fatiga visual mientras comunican una estética de herramienta de nivel "pro" premium.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Glassmorfismo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Uso extensivo de `backdrop-filter` para crear paneles flotantes, menús contextuales en capas y superposiciones modales elegantes.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Tokens de Movimiento Avanzados</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Las animaciones de entrada escalonadas, las microinteracciones al pasar el cursor o hacer clic y las transiciones de página fluidas crean una experiencia de software que se siente viva y altamente receptiva.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Vistas Clave Desarrolladas</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed space-y-2">
+    <p><strong>Página de Inicio:</strong> Sección de héroe de alta conversión con exhibiciones dinámicas de productos.</p>
+    <p><strong>Asistente de Incorporación:</strong> Configuración de perfil sin fricciones.</p>
+    <p><strong>Panel (Dashboard):</strong> El espacio de trabajo central para gestionar CVs, ver el historial de generación y realizar un seguimiento de los créditos.</p>
+    <p><strong>Ajustes y Perfil:</strong> Gestión centralizada de cuentas y facturación.</p>
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Propuesta de Valor</h2>
+
+La plataforma <strong>CV Builder</strong> se encuentra en la intersección del brillo estético y la automatización utilitaria de la IA. Proporciona a los buscadores de empleo una experiencia de preparación de documentos inigualable que históricamente requería costosos consultores humanos.
+
+Al combinar el rendimiento ultrarrápido de Next.js 16, la sólida escalabilidad de Supabase, la fiabilidad de Stripe y una interfaz de usuario asombrosa, la plataforma representa una clase magistral en la arquitectura SaaS moderna: lista para escalar y construida para convertir.
+
+<AutoScreenshotGallery fallback1="/images/cv-builder/1.png" fallback2="/images/cv-builder/2.png" />

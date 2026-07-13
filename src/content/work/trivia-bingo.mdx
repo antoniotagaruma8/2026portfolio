@@ -1,0 +1,116 @@
+---
+title: "Brain-Go Blitz!"
+subtitle: "AI-Powered Multiplayer Trivia Bingo"
+tech: ["Node.js", "Socket.io", "Google Gemini AI", "WebSockets"]
+link: "soon"
+github: "soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Brain-Go Blitz!</strong> is a high-fidelity, real-time interactive web application designed to merge the classic, fast-paced mechanics of Bingo with rigorous educational trivia. Specifically targeted at secondary school and high school students, the platform serves as a dynamic learning tool where educators can host live game sessions to assess students' comprehension across various subjects in a highly gamified, competitive environment.
+
+By combining the thrill of live multiplayer gaming with robust educational content, Brain-Go Blitz! ensures that formative assessment feels less like a test and more like an engaging classroom event.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Dynamic Content Generation</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Leverages Google's Gemini AI (2.5 Flash) to instantly generate curriculum-aligned trivia on any topic, eliminating the manual overhead of creating question banks.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Real-Time Synchronization</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utilizes a robust WebSocket architecture (Socket.io) to guarantee seamless, zero-latency synchronization between the host projector and individual student devices.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Immediate Formative Feedback</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Provides AI-generated contextual explanations for answers, reinforcing learning immediately post-question rather than waiting for an end-of-class review.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Gamification & Core Mechanics</h2>
+
+The platform introduces strategic gameplay to deter guessing and reward knowledge:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">The Bingo Board & Interactions</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Students receive a randomized 5x5 Bingo card. To mark a drawn number, they must answer the broadcasted multiple-choice trivia question correctly.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">The Punishment System</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    If a student answers incorrectly, the cell's number is replaced. If no replacements are available, the cell is permanently "Burned" (❌), rewarding accuracy over speed.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Streaks & Power-Ups</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Consecutive correct answers activate point multipliers. Harder "Boss Questions" reward critical Power-Ups like Ghost (Skip), 50/50, and Hack (Auto-mark).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The application is built for scalable, real-time classroom deployments.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Backend Infrastructure</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Powered by Node.js and Express.js, with Socket.io handling bi-directional communication for lobby management, live leaderboard updates, and power-up state synchronization.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Responsive Dual-Screen UI</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Features a rich Host Dashboard for projectors displaying the "fishbowl" and leaderboard, paired with an optimized, touch-friendly Player View for mobile devices.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Cloud Integrations & Deployment</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integrates the `@google/generative-ai` SDK for the core dynamic content engine. The app is fully containerized via Docker and configured for edge-optimized hosting on Fly.io.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/trivia-bingo/1.png" alt="Brain-Go Blitz App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/trivia-bingo/2.png" alt="Brain-Go Blitz App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,138 @@
+---
+title: "Debate Spark"
+subtitle: "Motor de Debate Local-Multijugador Interactivo"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript"]
+link: "https://debate-lovat.vercel.app"
+github: "https://github.com/antoniotagaruma8/debate"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Debate Spark</strong> es una aplicación web dinámica e interactiva diseñada para generar temas de debate atractivos y apropiados para adolescentes (13-18 años). Construida con un enfoque en UI/UX de alta fidelidad y mecánicas de gamificación, la plataforma sirve como una herramienta educativa que hace que la práctica del pensamiento crítico, la argumentación y la oratoria sea sumamente motivadora.
+
+Con su diseño de marco único, tokens de diseño vibrantes y micro-animaciones fluidas, Debate Spark transforma una actividad de clase tradicional o de grupo en una competición enérgica y de ritmo rápido.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Lightbulb className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Promover el Pensamiento Crítico</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Proporciona una lista seleccionada de temas que invitan a la reflexión, desde dilemas adolescentes diarios hasta cuestiones éticas complejas.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Gamepad2 className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Gamificar la Educación</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Implementa mecánicas de juego como un selector aleatorio de "Girar Lados", seguimiento de puntajes, rachas de victorias y temporizadores dinámicos para mantener el compromiso.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Accesibilidad y Claridad</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Ofrece explicaciones instantáneas y pistas para argumentar (perspectivas "A FAVOR" y "EN CONTRA") para asegurar que todos puedan participar con confianza.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Características Principales</h2>
+
+La aplicación está estructurada en torno a un ciclo de juego rápido que incluye las siguientes mecánicas:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Generación Dinámica de Temas</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un motor aleatorio sirve más de 40 temas seleccionados, garantizando que no haya repeticiones hasta agotar todas las opciones. Un indicador visual ("Spice Meter" 🌶️) señala el nivel de controversia y complejidad.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Selector de Bandos Aleatorio</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un sistema visual de cambio rápido asigna equitativamente posturas "A FAVOR" y "EN CONTRA" a los equipos rivales, junto con pistas de referencia rápida.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Temporizador Interactivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un temporizador visual de anillo en SVG con ajustes (30s, 1m, 2m, 3m). En los últimos 10 segundos, activa un "Modo Drama" con señales visuales rojas y efectos de tictac para aumentar la tensión.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Puntuación y Rachas</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Seguimiento de puntajes persistente para ambos equipos, con confeti de celebración, efectos de sonido y un banner dinámico por rachas de victorias consecutivas.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">Arquitectura del Frontend</h3>
+
+Debate Spark se ha desarrollado como una aplicación web Vanilla ligera y de alto rendimiento:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Stack Principal</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    HTML5, CSS3 y Vanilla JavaScript (ES6+), asegurando tiempos de carga instantáneos sin la sobrecarga de pesados frameworks.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Sistema de Diseño</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    CSS personalizado que incluye variables para una tematización coherente, tipografía moderna (Outfit & Space Grotesk vía Google Fonts), y un diseño flex/grid responsive en un solo marco.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Motor de Animaciones</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Micro-animaciones controladas por CSS, incluyendo tarjetas giratorias, botones pulsantes, partículas flotantes de fondo y elementos del DOM (confeti) activados por JavaScript.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión de Audio</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un script modular dedicado `sounds.js` maneja la instanciación de audio HTML5 para respuestas auditivas (tictac, timbres, campanas de victoria).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Propuesta de Valor y Casos de Uso</h2>
+
+Ya sea implementado en un entorno formal de clase, en programas de ESL/EFL o en actividades juveniles, Debate Spark proporciona un valor inmediato al eliminar la fricción de organizar un debate. Los atajos de teclado integrados (`Espacio` para generar, `T` para el temporizador, `S` para cambiar lados) permiten a los educadores actuar como presentadores fluidos. Al combinar un diseño de interfaz premium con la práctica esencial de la comunicación oral, la plataforma demuestra que el rigor académico y el compromiso lúdico pueden coexistir maravillosamente.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/debate-spark/1.png" alt="Debate Spark App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/debate-spark/2.png" alt="Debate Spark App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

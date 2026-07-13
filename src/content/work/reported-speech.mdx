@@ -1,0 +1,116 @@
+---
+title: "Echo News: Reported Speech Master"
+subtitle: "Grammar Gamification via Classroom Arcade"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Web Audio API"]
+link: "https://reported-speech-kohl.vercel.app"
+github: "https://github.com/antoniotagaruma8/ReportedSpeech"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Echo News</strong> is an immersive, gamified web application designed to help B2-level English language learners master the complexities of Reported Speech. Built as a "Classroom Arcade" experience, the platform transforms traditional grammar exercises into high-stakes, narrative-driven missions across various professional and covert scenarios—from intercepting spy communications to reporting on courtroom dramas and boardroom negotiations.
+
+The application seamlessly blends educational rigor with an engaging, dark-themed UI/UX, utilizing a bespoke, multi-modal game engine that tests learners on tense backshifting, pronoun/time adjustments, and the precise use of advanced reporting verbs.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Targeted Core Skills</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Moves students beyond rote memorization by testing backshifting tenses, time/place word changes, and complex reporting verbs like <i>deny, insist, threaten,</i> and <i>advise</i>.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Integrated Glossary</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>An auto-detecting vocabulary engine scans questions for complex terms and wraps them in a clickable glossary tool, providing instant definitions to reduce cognitive load.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Immediate Feedback</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Every interaction provides granular, context-specific explanations for both correct and incorrect choices, reinforcing the underlying grammatical logic instantly.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Gamification & Interactive Mechanics</h2>
+
+The platform features a multi-scenario engine with distinct, specialized game modes to target different cognitive and linguistic skills:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Specialized Game Modes</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Includes <strong>Classic Mode</strong> (multiple-choice), <strong>Scramble Mode</strong> (drag-and-drop syntax building), <strong>Proofreader Mode</strong> (text correction), and <strong>Narrative/Interrogator Mode</strong> (dynamic chat-history simulation).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Wiretap Mode (Audio)</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    An advanced listening comprehension mode utilizing the Web Speech Synthesis API. Students listen to "intercepted" audio and must accurately report what they heard, bridging listening skills with grammar production.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Dynamic Scenarios</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    To prevent fatigue and provide contextual variety, the application offers diverse thematic missions such as Echo News (Journalism), Precinct 101 (Police Interrogation), Spilled Tea (Tabloid Gossip), Boardroom Brief (Corporate Finance), Witness Stand (Courtroom Drama), Secret Agent (Covert Ops), and Sideline Report (Sports Analysis).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & UI/UX</h2>
+
+The application is built using a lightweight, modular vanilla web stack, ensuring high performance, zero dependencies, and broad compatibility.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Data & State Management</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A robust JSON-like data architecture (`data.js`) houses hundreds of meticulously crafted grammar questions. A centralized Game Engine (`script.js`) handles mission routing, score tracking, array shuffling (Fisher-Yates) for randomized replayability, and dynamic DOM injection.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Audio Integration</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A custom Web Audio API wrapper (`sfx.js`) manages immersive UI sound effects (navigation, correct/incorrect feedback, mission reveals) and interfaces with the Text-to-Speech (TTS) engine for the Wiretap mode.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Cyber-Newsroom Aesthetic</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    The aesthetic is deliberately designed to feel like a premium, high-stakes terminal. It utilizes glassmorphism, glowing accents, a dark mode aesthetic, and micro-interactions (shake animations for errors, dynamic waveform visualizations) to keep the user visually engaged.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/reported-speech/1.png" alt="Reported Speech App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/reported-speech/2.png" alt="Reported Speech App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

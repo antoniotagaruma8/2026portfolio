@@ -1,0 +1,128 @@
+---
+title: "Esto no es un..."
+subtitle: "Pizarra Digital Interactiva y Juego de Oratoria"
+tech: ["HTML5 Canvas", "CSS3", "Vanilla JavaScript"]
+link: "https://thisisnot-a.vercel.app/"
+github: "https://github.com/antoniotagaruma8/thisisnot-a-"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Esto no es un...</strong> es una aplicación interactiva dinámica basada en el navegador, diseñada para actividades de grupo, gamificación educativa y presentaciones creativas. En su núcleo, la aplicación es una pizarra de dibujo digital donde se pide a los usuarios que dibujen objetos aleatorios.
+
+Sin embargo, eleva la experiencia de dibujo estándar al introducir un "Modo de Presentación" de alta presión que requiere que los usuarios incorporen palabras de vocabulario aleatorias en un discurso cronometrado, lo que lo convierte en una excelente herramienta para el aprendizaje de idiomas, romper el hielo o eventos de despedida.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <PenTool className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Motor de Dibujo Interactivo</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cuenta con una pizarra de dibujo HTML5 Canvas responsiva que soporta entradas táctiles y de ratón, completa con una paleta de herramientas personalizada (colores, tamaños de trazo, borrador).</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Gamepad2 className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Indicaciones Gamificadas</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Solicita a los usuarios que dibujen a partir de un banco de más de 50 elementos predefinidos (ej. 🍌 Plátano, 🚀 Cohete), acompañados de emojis visuales y animaciones de confeti.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Modo Presentación</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Al iniciar el modo "Presentar" aparece un temporizador de 30 segundos y se generan 3 palabras aleatorias que deben incorporarse en el discurso cronometrado.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Secuencia Secreta de Despedida</h2>
+
+Oculto en la plataforma hay un huevo de pascua especializado diseñado para comentarios de clausura o para concluir un evento:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">El Activador</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un sutil botón (✨) desencadena una secuencia emocional de dos etapas, diseñada explícitamente para despedidas.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Etapa 1</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Limpia el lienzo y altera el mensaje del encabezado a: <em>"Esto no es un Adiós 👋, esto es..."</em>
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Etapa 2</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Ofrece el mensaje final: <em>"...¡un hasta luego! ❤️"</em> acompañado de una extensa animación festiva de confeti.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+La aplicación está construida utilizando un stack tecnológico ligero y exclusivamente de frontend, garantizando tiempos de carga rápidos y compatibilidad universal en navegadores.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estructura del Frontend</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Marcado HTML5 semántico y limpio, integrando la fuente 'Outfit' y una librería de Confeti de terceros (`canvas-confetti`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estilos y Glassmorfismo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Emplea una estética premium de Glassmorfismo con fondos difuminados y bordes translúcidos. El diseño totalmente responsive adapta su panel de herramientas y diseño del lienzo para pantallas móviles utilizando variables CSS.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estado y Lógica</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Maneja estados de dibujo, selección de herramientas y lógica de generación aleatoria sin frameworks externos. Implementa una lógica de redimensionamiento personalizada para asegurar que las coordenadas de dibujo del lienzo sigan siendo precisas.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Web Audio API</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Sintetiza efectos de sonido personalizados dinámicamente (Pop, Tick, Timbre), eliminando la necesidad de activos de archivos de audio externos.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Propuesta de Valor</h2>
+
+<strong>Esto no es un...</strong> actúa como una poderosa herramienta educativa. El modo de presentación obliga a los usuarios a construir frases sobre la marcha utilizando un vocabulario específico, tendiendo un puente entre la expresión creativa y la fluidez lingüística. También sirve como un excelente rompehielos de bajo riesgo donde los usuarios pueden mostrar su creatividad y habilidades de oratoria.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/thisisnot-a/1.png" alt="This is not a App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/thisisnot-a/2.png" alt="This is not a App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

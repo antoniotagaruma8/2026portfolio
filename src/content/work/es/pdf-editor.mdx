@@ -1,0 +1,56 @@
+---
+title: "Editor de PDF Interactivo"
+subtitle: "Anotación de Hojas de Trabajo en el Navegador"
+tech: ["HTML5", "Canvas API", "PDF.js", "Fabric.js"]
+github: "https://github.com/antoniotagaruma8"
+link: "/es/coming-soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Editor de PDF Interactivo</strong> es una herramienta de navegador ligera y sin instalación, diseñada específicamente para educadores. Al combinar PDF.js de Mozilla para la renderización y Fabric.js para el dibujo, la aplicación permite a los profesores proyectar y anotar dinámicamente hojas de trabajo en PDF sobre una pizarra inteligente, eliminando la necesidad de costoso software propietario.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Renderizado Instantáneo</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utiliza PDF.js para analizar y renderizar documentos PDF de alta fidelidad directamente en el Canvas del navegador, garantizando tiempos de inicio de latencia cero, cruciales para mantener el flujo de la clase.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Anotación Dinámica</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Superpone un lienzo transparente de Fabric.js sobre el documento, dotando a los profesores de bolígrafos digitales, resaltadores y herramientas de inserción de texto para la demostración de hojas de trabajo en tiempo real.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Solo del Lado del Cliente</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Todo el procesamiento se maneja completamente en la máquina del cliente, lo que significa que ningún material confidencial de los estudiantes o exámenes con derechos de autor se cargan a un servidor externo.</p>
+    </div>
+  </div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Demo de la Plataforma en Vivo</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+  </div>
+</div>
+
+

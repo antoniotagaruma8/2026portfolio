@@ -1,0 +1,210 @@
+---
+title: "Photo Description Activity"
+subtitle: "Interactive Gen-Z Edition Speaking Practice"
+tech: ["Vanilla JavaScript", "HTML5", "CSS3", "Web Speech API"]
+link: "https://photo-description-activity.vercel.app"
+github: "https://github.com/antoniotagaruma8/PhotoDescriptionActivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+The <strong>Photo Description Activity</strong> is a highly interactive, zero-dependency educational web application designed to teach English language learners the art of describing visual media. Specifically tailored for teenagers and young adults (the "Gen-Z" demographic), the application employs a premium, dark-mode "gaming" aesthetic, engaging gamification elements, and an interactive presentation engine to transform a traditional, often monotonous classroom speaking exercise into an immersive, high-energy arcade experience.
+
+Operating as a standalone smart presentation tool, the project is built entirely in Vanilla HTML, CSS, and JavaScript, leveraging dynamic content injection, the Web Speech API, and a custom-built AudioContext synthesizer to provide real-time, AI-curated model answers without requiring any external assets or internet connection during deployment.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Location Basics</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Spatial awareness phrasing (e.g., <em>“In the foreground / background...”</em>)</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">The Facts</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Objective observation framing (e.g., <em>“This photo shows...”</em>)</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Vibe & Appearances</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Interpreting atmosphere and body language (e.g., <em>“It looks as if...”</em>)</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-amber-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Lightbulb className="text-amber-500" size={24} />
+    </div>
+    
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-amber-500 transition-colors">Speculating</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Employing modal verbs for deduction (e.g., <em>“might / could / may...”</em>)</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The project is engineered as a zero-dependency, single-page application (`index.html`) to guarantee absolute portability and offline reliability in a dynamic classroom environment.
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">1. Front-End & UI/UX Design</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Premium Aesthetic</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Implements a high-fidelity, "Cyberpunk/Gaming" dark theme utilizing CSS variables, glowing neon accents (Cyan and Purple), glassmorphism (`backdrop-filter`), and dynamic ambient background blobs (`@keyframes` float animations).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Liquid Layout & Responsive Design</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    The UI employs `clamp()`, `vh`/`vw` units, and CSS Grid/Flexbox to lock seamlessly to any viewport, preventing overflow and ensuring a flawless, scaled display on smartboards, monitors, and tablets.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Interactive Modals</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Custom-built modal overlays with entry/exit animations provide instant access to grammar rules, phrase explainers, and interactive vocabulary definitions.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">2. Core Functional Mechanics</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Dynamic Image Engine</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    The application features a pre-loaded array of 50 high-quality images curated for Gen-Z appeal (e.g., aesthetic study spaces, skateparks, cyberpunk streets, and humorous meme templates). The array is randomly shuffled upon each initialization to guarantee a unique presentation flow every session.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Slot-Machine Prompt Generator</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A randomized, animated "slot-machine" interface selects three unique phrase starters per image (e.g., <em>“What catches my eye is...”</em>). The engine dynamically prevents repetitive prompts and forces students to adapt to different sentence structures on the fly.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Generative Model Answers</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    The system synthesizes a "Perfect Answer" dynamically based <em>only</em> on the three grammatical prompts rolled by the slot machine. It uses JavaScript Regex replacement to map the randomly selected prompt variants to the underlying data structure perfectly.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Interactive Vocabulary Dictionary</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    High-level vocabulary words within the model answers are automatically detected, highlighted with dashed underlines, and cross-referenced with an internal dictionary. Clicking a word triggers a smooth modal revealing its definition.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">3. Gamification & Engagement Systems</h3>
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Intelligent Timer System</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A sleek progress-bar timer counts down 45 seconds per slide, dynamically transitioning through "safe", "danger", and "panic" (pulsing) states as time runs out to simulate exam pressure.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Arcade Audio Engine</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Built using the native Web \`AudioContext\` API, the app features synthesized audio cues—including slot-machine ticking, lock-in chimes, and a time-up buzzer—completely removing the need for external MP3 files and ensuring zero-latency playback.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Text-to-Speech (TTS) Integration</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utilizes the native \`window.speechSynthesis\` API (targeting popular "TikTok-style" or clear conversational voices) to read the model answer aloud when revealed, providing crucial pronunciation and intonation modeling.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Random Student Selector</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    An integrated randomizer selects students based on fun, observable criteria (e.g., <em>"Someone wearing white shoes"</em>, <em>"The person sitting closest to the door"</em>), maintaining high engagement and unpredictability.
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">4. Data Pipeline (Backend Generation)</h3>
+
+While the final deployment is a static \`index.html\` file, the underlying data architecture was generated via a sophisticated suite of Node.js and Python curation scripts:
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">\`build_rich.py\` & Fetch Scripts</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Scripts responsible for fetching high-quality metadata and images from Unsplash via API, ensuring diversity and aesthetic quality (mapping queries like "neon gaming keyboard" or "vintage film camera").
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">\`inject_perfect_answers.js\`</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A build tool that structures the curated image data, aligns it with AI-assisted "Perfect Answers" mapped to specific grammatical keys, and dynamically compiles the resulting JSON data directly into the \`index.html\` application state.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Value Proposition</h2>
+
+The <strong>Photo Description Activity</strong> demonstrates a mastery of front-end UI/UX design, state management, and educational psychology. By stripping away heavy JavaScript frameworks in favor of hyper-optimized Vanilla JavaScript and CSS, the project delivers a lightning-fast, visually stunning, and highly effective pedagogical tool. 
+
+It successfully bridges the gap between modern, tech-savvy student expectations and rigorous language learning requirements (such as Cambridge speaking exam preparation), providing educators with an innovative, zero-setup platform that turns a mandatory speaking drill into an eagerly anticipated classroom event.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/photo-description/1.png" alt="Photo Description App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/photo-description/2.png" alt="Photo Description App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+
+</div>

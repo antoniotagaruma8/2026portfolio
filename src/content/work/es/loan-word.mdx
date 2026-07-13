@@ -1,0 +1,116 @@
+---
+title: "LoanWord Detectives"
+subtitle: "Exploración Etimológica de Arrastrar y Soltar"
+tech: ["HTML5 Drag and Drop API", "CSS3", "Vanilla JavaScript"]
+link: "https://loan-word-detectives.vercel.app"
+github: "https://github.com/antoniotagaruma8/LoanWordDetectives"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>LoanWord Detectives</strong> es una herramienta educativa interactiva y gamificada de arrastrar y soltar diseñada para ayudar a los estudiantes a explorar los orígenes etimológicos del vocabulario filipino (tagalo). Al asumir el papel de "detectives", los estudiantes analizan "tarjetas de evidencia" lingüísticas y categorizan las palabras en tres orígenes históricos: Indígena (Austronesio), Español e Inglés.
+
+La aplicación combina mecánicas de clasificación rápida, retroalimentación en tiempo real y modos de equipo competitivos para transformar la lingüística histórica y la adquisición de vocabulario en una atractiva actividad de aula o en solitario.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Conciencia Etimológica</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Ayuda a los estudiantes a reconocer las influencias históricas en el idioma filipino moderno identificando palabras prestadas comunes y sus idiomas raíz.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Agilidad Cognitiva</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>El entorno bajo presión de tiempo fomenta la rápida recuperación y el reconocimiento de patrones basados en las características fonéticas y estructurales de las palabras.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Aprendizaje Colaborativo</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Los modos multiequipo fomentan la comunicación, el debate y la creación de consensos a medida que los grupos trabajan juntos para clasificar palabras ambiguas bajo presión de tiempo.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Mecánicas de Gamificación</h2>
+
+La aplicación transforma la clasificación de vocabulario de memoria en una experiencia de aprendizaje activa:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Reparto Dinámico por Lotes</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Para evitar el amontonamiento en la pantalla, el motor sirve "tarjetas de evidencia" en lotes de 5. Se reparten nuevas tarjetas automáticamente solo cuando se despeja la pila actual, gestionando la carga cognitiva.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Ciclo de Retroalimentación Instantánea</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    La ubicación correcta genera una animación de texto flotante verde "+100" y bloquea la tarjeta en su lugar. La ubicación incorrecta desencadena una penalización roja flotante de "-20" y una animación de "sacudida" visual, devolviendo la tarjeta a su estado activo.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Modos Multijugador y Contrarreloj</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Admite "Misión en Solitario" junto con modos competitivos de 2, 3 o 4 equipos. Cuenta con un temporizador de cuenta regresiva que se estresa visualmente (se vuelve rojo) durante los últimos 10 segundos para aumentar el compromiso.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica y Escalabilidad</h2>
+
+La aplicación está construida como una aplicación de página única (SPA) ligera del lado del cliente, asegurando una carga rápida y cero latencia durante el juego.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Mecánicas Básicas</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza la API de Arrastrar y Soltar nativa de HTML5 (`dragstart`, `dragover`, `drop`) para una interacción fluida e intuitiva.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión del Estado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    JavaScript puro maneja estados de juego complejos, incluida la lógica basada en turnos para hasta 4 equipos, el seguimiento de la puntuación en tiempo real, las cuentas regresivas del temporizador y las actualizaciones dinámicas del DOM.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Escalabilidad Futura</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Debido a su estructura de datos modular, el motor principal puede adaptarse fácilmente para diferentes idiomas de destino, clasificación de partes del discurso, categorizaciones gramaticales o integrarse con una base de datos backend para extraer listas de palabras dinámicas basadas en los niveles de dificultad del usuario.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/loan-word/1.png" alt="Loan Word Detectives App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/loan-word/2.png" alt="Loan Word Detectives App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

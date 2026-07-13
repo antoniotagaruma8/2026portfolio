@@ -1,0 +1,119 @@
+---
+title: "Lesson Hub"
+subtitle: "AI-Powered Educational Scheduling Dashboard"
+tech: ["Next.js 16", "React 19", "Supabase", "Gemini 2.5 Flash", "Tailwind CSS"]
+link: "https://classhub-seven.vercel.app/"
+github: "https://github.com/antoniotagaruma8"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Lesson Hub</strong> is a dynamic, full-stack web application designed to modernize the way educators organize, manage, and share their daily teaching schedules and classroom resources. Moving beyond static paper planners and disjointed file systems, Lesson Hub provides a centralized digital dashboard. 
+
+Its core vision is to drastically reduce administrative friction through AI automation—specifically by instantly converting static schedule images into interactive digital timetables—while offering a seamless, always-accessible portal for both teachers and students.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Zero-Friction Onboarding</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Eliminates manual data entry by using advanced Vision AI to read and parse PDF or image-based school schedules into fully structured digital timetables instantly.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Unified Resource Hub</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Consolidates daily lesson plans, favorite quick-links, and image galleries into a single, cloud-synced interface with context-aware tracking anchored directly to specific class slots.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Dual-Mode Visibility</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Features a robust permissions system allowing teachers to seamlessly toggle between "Admin Mode" for editing and a clean "View Only" mode for students to access daily materials via a public link.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Key Functional Features</h2>
+
+The application is engineered to accommodate the dynamic, high-pressure nature of teaching:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">AI-Powered Schedule Generation</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Leverages Google Gemini 2.5 Flash to perform intelligent OCR and structural parsing on uploaded schedule screenshots, automatically generating a persistent weekly schedule with distinct color-coding.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Interactive Master Calendar</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A synchronized master calendar allows users to click any date to reveal class sequences. Users can draft markdown notes, attach URLs with AI-generated titles, and upload image resources directly.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Advanced Workflow Automation</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Includes "Reschedule & Copy" tools to easily duplicate or move lesson plans. Multi-Profile Management supports educators juggling different roles by allowing them to toggle between distinct schedules.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+Built upon a modern, highly responsive full-stack architecture prioritizing speed and accessibility:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend Framework</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Powered by Next.js 16 and React 19, delivering a highly responsive, server-side rendered application styled via Tailwind CSS, complete with interactive onboarding (`react-joyride`) and drag-and-drop (`@dnd-kit`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Backend & Database</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utilizes Supabase for secure Google OAuth authentication, a scalable PostgreSQL relational database for schedules, and dedicated Storage Buckets for managing user-uploaded image galleries.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">AI Orchestration</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Deep integration with Google's generative models (`@google/generative-ai`) to handle complex data extraction and intelligent content generation directly within server actions.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Platform Preview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+
+  </div>
+</div>

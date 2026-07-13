@@ -1,0 +1,158 @@
+﻿---
+title: "Exámenes de Práctica CEFR"
+subtitle: "Plataforma full-stack con IA para generar exámenes completos estilo Cambridge."
+tech: ["Next.js 14", "TypeScript", "Supabase", "Gemini 1.5", "Pollinations.ai", "Web Speech API"]
+link: "https://cpev2.vercel.app/"
+github: "https://github.com/AntonTheDev/CPEv2"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+La <strong>Plataforma de Exámenes Cambridge CEFR (CPEv2)</strong> es una solución EdTech serverless e integral diseñada para generar y administrar dinámicamente exámenes de dominio del inglés estilo Cambridge. Abarcando todos los niveles del MCER (A1 a C2), sirve como simulador interactivo para estudiantes y como un potente motor automatizado para educadores, proporcionando un entorno escalable y de coste cero para una práctica auténtica.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+  {/* Card 1: Core Value Proposition */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Generación Completa</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Crea automáticamente módulos de Lectura, Escritura, Comprensión Auditiva y Expresión Oral siguiendo los formatos exactos de Cambridge, utilizando sistemas integrados para la evaluación instantánea de ensayos.</p>
+    </div>
+  </div>
+
+  {/* Card 2: Technical Architecture */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Arquitectura Serverless</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Construida sobre un stack 100% gratuito. Impulsada por Next.js 14 y Supabase, y orquestada por los modelos Gemini 1.5 Flash de Google, con robustos sistemas de mitigación de límites de tasa (rate-limit).</p>
+    </div>
+  </div>
+
+  {/* Card 3: The Outcome */}
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Impacto Estratégico</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Democratiza el acceso a prácticas estandarizadas de alta calidad. Al eliminar los costes recurrentes asociados a los libros de trabajo y la corrección manual, proporciona infinitas variaciones de exámenes.</p>
+    </div>
+  </div>
+
+</div>
+
+### Diferenciadores Clave
+
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estricto Cumplimiento Estructural del MCER</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Emplea esquemas JSON explícitos para aplicar reglas estructurales exactas (formatos específicos de cada parte, distribución de preguntas y medios) para cada nivel CEFR.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Medios Auténticos a Coste Cero</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integra Pollinations.ai para la generación dinámica de imágenes contextuales sin claves API, y utiliza la Web Speech API nativa para la comprensión auditiva de alta calidad.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Motor Generador Dual</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Cuenta con un Generador Manual bajo demanda para profesores y un trabajo automatizado en segundo plano (Cron Job) que puebla continuamente la biblioteca global con nuevos exámenes.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Paneles Personalizados</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Proporciona interfaces optimizadas con temporizadores integrados para los estudiantes, y completas bibliotecas de gestión y seguimiento de progreso para los profesores.
+  </div>
+</div>
+</div>
+
+### Ejemplos de Exámenes Descargables
+
+Exporté estos documentos directamente desde el motor automatizado de PDFs de la plataforma. Incluyen formato auténtico de Cambridge, rúbricas de puntuación y modelos de respuesta.
+
+<div className="flex flex-wrap gap-3 mt-6 mb-12">
+  <a href="/docs/cpe/reading.pdf" target="_blank" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-accent-blue/90 border border-accent-blue rounded-xl hover:bg-accent-blue transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]">
+    <BookOpen size={16} /> Reading & Use of English
+  </a>
+  <a href="/docs/cpe/writing.pdf" target="_blank" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-accent-teal/90 border border-accent-teal rounded-xl hover:bg-accent-teal transition-all shadow-[0_0_15px_rgba(20,184,166,0.3)] hover:shadow-[0_0_25px_rgba(20,184,166,0.6)]">
+    <BookOpen size={16} /> Writing
+  </a>
+  <a href="/docs/cpe/listening.pdf" target="_blank" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-red-500/90 border border-red-500 rounded-xl hover:bg-red-500 transition-all shadow-[0_0_15px_rgba(239,68,68,0.3)] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)]">
+    <BookOpen size={16} /> Listening
+  </a>
+  <a href="/docs/cpe/speaking.pdf" target="_blank" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-amber-500/90 border border-amber-500 rounded-xl hover:bg-amber-500 transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.6)]">
+    <BookOpen size={16} /> Speaking
+  </a>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Demo de la Plataforma en Vivo</span>
+  <div className="grid grid-cols-4 grid-rows-3 gap-3 max-w-4xl mx-auto h-[350px]">
+    
+    {/* Large Square (Top Left) */}
+    <div className="col-span-2 row-span-2 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/dashboard.png" alt="CEFR Mock Exams Dashboard" className="object-cover w-full h-full" />
+    </div>
+    
+    {/* Small Square (Top Mid) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/reading.png" alt="Módulo de Lectura" className="object-cover w-full h-full" />
+    </div>
+    
+    {/* Tall Vertical (Top Right) */}
+    <div className="col-span-1 row-span-2 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/writing.png" alt="Módulo de Escritura" className="object-cover w-full h-full" />
+    </div>
+
+    {/* Small Square (Center) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/listening.png" alt="Módulo de Comprensión Auditiva" className="object-cover w-full h-full" />
+    </div>
+
+    {/* Small Square (Bottom Left) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/speaking.png" alt="Módulo de Expresión Oral" className="object-cover w-full h-full" />
+    </div>
+
+    {/* Wide Horizontal (Bottom Mid) */}
+    <div className="col-span-2 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableVideo src="/images/cpe/highlights.mp4" autoPlay muted loop playsInline className="object-cover w-full h-full" />
+    </div>
+
+    {/* Small Square (Bottom Right) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/cpe/real_dashboard.png" alt="Panel en Vivo de CEFR Mock Exams" className="object-cover w-full h-full" />
+    </div>
+
+  </div>
+</div>
+
+

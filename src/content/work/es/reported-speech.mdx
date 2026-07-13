@@ -1,0 +1,116 @@
+---
+title: "Echo News: Reported Speech Master"
+subtitle: "Gamificación de la Gramática en Aula Arcade"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Web Audio API"]
+link: "https://reported-speech-kohl.vercel.app"
+github: "https://github.com/antoniotagaruma8/ReportedSpeech"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Echo News</strong> es una aplicación web inmersiva y gamificada diseñada para ayudar a los estudiantes de inglés de nivel B2 a dominar las complejidades del Estilo Indirecto (Reported Speech). Construida como una experiencia de "Aula Arcade", la plataforma transforma los ejercicios de gramática tradicionales en misiones narrativas de alto riesgo a través de varios escenarios profesionales y encubiertos, desde interceptar comunicaciones de espías hasta informar sobre dramas judiciales y negociaciones en la sala de juntas.
+
+La aplicación combina a la perfección el rigor educativo con un diseño de interfaz de usuario oscuro y atractivo (UI/UX), utilizando un motor de juego a medida y multimodal que evalúa a los estudiantes en el retroceso de tiempos verbales (backshifting), ajustes de pronombres/tiempo, y el uso preciso de verbos de reporte avanzados.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Habilidades Básicas Específicas</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Lleva a los estudiantes más allá de la memorización mecánica al evaluar el retroceso de tiempos verbales, cambios de palabras de tiempo/lugar y verbos de reporte complejos como <i>deny, insist, threaten,</i> y <i>advise</i>.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Glosario Integrado</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Un motor de vocabulario con autodetección escanea las preguntas en busca de términos complejos y los envuelve en una herramienta de glosario interactiva, proporcionando definiciones instantáneas para reducir la carga cognitiva.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Feedback Inmediato</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cada interacción proporciona explicaciones detalladas y específicas del contexto tanto para opciones correctas como incorrectas, reforzando instantáneamente la lógica gramatical subyacente.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Mecánicas de Gamificación e Interactividad</h2>
+
+La plataforma cuenta con un motor de escenarios múltiples con distintos modos de juego especializados para apuntar a diferentes habilidades cognitivas y lingüísticas:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Modos de Juego Especializados</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Incluye <strong>Classic Mode</strong> (opción múltiple), <strong>Scramble Mode</strong> (construcción de sintaxis de arrastrar y soltar), <strong>Proofreader Mode</strong> (corrección de textos), y <strong>Narrative/Interrogator Mode</strong> (simulación dinámica de historial de chat).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Wiretap Mode (Audio)</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un modo de comprensión auditiva avanzado que utiliza la API de Síntesis de Voz Web. Los estudiantes escuchan audios "interceptados" y deben informar con precisión lo que escucharon, conectando las habilidades auditivas con la producción gramatical.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Escenarios Dinámicos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Para evitar la fatiga y proporcionar variedad contextual, la aplicación ofrece diversas misiones temáticas, como Echo News (Periodismo), Precinct 101 (Interrogatorio policial), Spilled Tea (Chismes sensacionalistas), Boardroom Brief (Finanzas corporativas), Witness Stand (Drama judicial), Secret Agent (Operaciones encubiertas), y Sideline Report (Análisis deportivo).
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica y UI/UX</h2>
+
+La aplicación está construida utilizando un stack web vanilla ligero y modular, lo que garantiza un alto rendimiento, cero dependencias y una amplia compatibilidad.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gestión de Datos y Estado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Una robusta arquitectura de datos similar a JSON (`data.js`) alberga cientos de preguntas de gramática meticulosamente elaboradas. Un motor de juego centralizado (`script.js`) maneja el enrutamiento de misiones, el seguimiento de puntajes, la mezcla de arreglos (Fisher-Yates) para una rejugabilidad aleatoria y la inyección dinámica del DOM.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Integración de Audio</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un contenedor de la API de Web Audio personalizado (`sfx.js`) administra los efectos de sonido inmersivos de la interfaz de usuario (navegación, comentarios correctos/incorrectos, revelaciones de misiones) y se vincula con el motor de texto a voz (TTS) para el modo Wiretap.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estética de "Cibernoticiario"</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    La estética está diseñada deliberadamente para sentirse como una terminal premium de alto riesgo. Utiliza glassmorfismo, acentos brillantes, un modo oscuro y microinteracciones (animaciones de sacudida para errores, visualizaciones dinámicas de formas de onda) para mantener al usuario visualmente comprometido.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/reported-speech/1.png" alt="Reported Speech App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/reported-speech/2.png" alt="Reported Speech App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

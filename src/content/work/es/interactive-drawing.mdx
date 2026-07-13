@@ -1,0 +1,56 @@
+---
+title: "Pizarra Interactiva de Dibujo"
+subtitle: "Pizarra Optimizada para Uso Táctil en Educación Primaria"
+tech: ["HTML5", "Canvas API", "PointerEvents API"]
+github: "https://github.com/antoniotagaruma8"
+link: "/es/coming-soon"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Pizarra Interactiva de Dibujo</strong> es una aplicación de pizarra digital especializada, creada para aulas de educación primaria y preescolar. Priorizando una respuesta extrema y la compatibilidad táctil, la herramienta permite a los jóvenes estudiantes interactuar directamente con las pizarras inteligentes sin experimentar el retraso de entrada común en el software comercial más pesado, manteniendo su atención enfocada en la tarea creativa.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Entrada de Latencia Cero</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Omite la manipulación tradicional del DOM a favor de la renderización directa en HTML5 Canvas, lo que garantiza que los trazos rápidos de los dedos de los estudiantes de primaria se capturen perfectamente sin tartamudeos.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">PointerEvents Unificados</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Utiliza la moderna API de PointerEvents para proporcionar una experiencia de dibujo unificada, manejando sin problemas los clics del mouse, la presión del lápiz óptico y las entradas multitáctiles simultáneamente en la pizarra inteligente del aula.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Interfaz Minimalista</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cuenta con una interfaz intencionadamente simplificada con botones grandes codificados por colores diseñados específicamente para las habilidades motoras de los niños pequeños, eliminando menús complejos que causan distracción.</p>
+    </div>
+  </div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Demo de la Plataforma en Vivo</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+  </div>
+</div>
+
+

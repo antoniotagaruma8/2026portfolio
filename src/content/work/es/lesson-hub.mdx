@@ -1,0 +1,119 @@
+---
+title: "Lesson Hub"
+subtitle: "Panel de Programación Educativa con IA"
+tech: ["Next.js 16", "React 19", "Supabase", "Gemini 2.5 Flash", "Tailwind CSS"]
+link: "https://classhub-seven.vercel.app/"
+github: "https://github.com/antoniotagaruma8"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Lesson Hub</strong> es una aplicación web full-stack dinámica diseñada para modernizar la forma en que los educadores organizan, administran y comparten sus horarios de enseñanza y recursos. Más allá de las agendas estáticas en papel y los sistemas de archivos desarticulados, Lesson Hub proporciona un panel digital centralizado.
+
+Su visión principal es reducir drásticamente la fricción administrativa a través de la automatización por IA—específicamente al convertir instantáneamente imágenes de horarios en horarios digitales interactivos—mientras ofrece un portal fluido y siempre accesible tanto para profesores como para estudiantes.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Incorporación Sin Fricciones</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Elimina la entrada manual de datos utilizando IA de Visión avanzada para leer y analizar horarios escolares basados en imágenes o PDF en horarios digitales totalmente estructurados al instante.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Centro de Recursos Unificado</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Consolida planes de lecciones diarios, enlaces rápidos y galerías de imágenes en una sola interfaz sincronizada en la nube con seguimiento contextual anclado a clases específicas.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Visibilidad de Modo Dual</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cuenta con un sólido sistema de permisos que permite a los docentes alternar sin problemas entre el "Modo Administrador" y un "Modo de Solo Lectura" para que los estudiantes accedan a los materiales.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Características Funcionales Clave</h2>
+
+La aplicación está diseñada para adaptarse a la naturaleza dinámica y de alta presión de la enseñanza:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Generación de Horarios por IA</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Aprovecha Google Gemini 2.5 Flash para realizar un OCR inteligente y análisis estructural en capturas de pantalla de horarios, generando automáticamente un horario semanal persistente con códigos de color.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Calendario Maestro Interactivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Un calendario sincronizado permite a los usuarios revelar secuencias de clases. Los usuarios pueden redactar notas, adjuntar URL con títulos generados por IA y cargar recursos de imágenes directamente.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Automatización de Flujo de Trabajo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Incluye herramientas de "Reprogramar y Copiar" para duplicar planes de lecciones. La Gestión Multifiche permite a los educadores alternar entre horarios distintos para diferentes roles.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+Construida sobre una arquitectura full-stack moderna y altamente receptiva que prioriza la velocidad y la accesibilidad:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Framework Frontend</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Impulsado por Next.js 16 y React 19, ofrece una aplicación altamente receptiva renderizada en el servidor, con estilo de Tailwind CSS, con incorporación interactiva (`react-joyride`) y drag-and-drop (`@dnd-kit`).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Backend y Base de Datos</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utiliza Supabase para la autenticación segura de Google OAuth, una base de datos relacional PostgreSQL para los horarios y Storage Buckets dedicados para administrar las galerías de imágenes.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Orquestación de IA</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integración profunda con los modelos generativos de Google (`@google/generative-ai`) para manejar la extracción de datos compleja y la generación inteligente de contenido directamente en las acciones del servidor.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Demo de la Plataforma en Vivo</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+    
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50">
+      [Media Placeholder]
+    </div>
+
+  </div>
+</div>

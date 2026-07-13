@@ -1,0 +1,100 @@
+---
+title: "WordSnake"
+subtitle: "The Category Sprint Game"
+tech: ["HTML5 Canvas", "CSS3", "Vanilla JavaScript"]
+link: "https://word-snake-pi.vercel.app"
+github: "https://github.com/antoniotagaruma8/WordSnake"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>WordSnake</strong> is a fast-paced, competitive educational web application designed to test vocabulary recall, spelling, and quick thinking. Functioning as a high-stakes "category sprint," the game challenges two teams to build the longest continuous word chain before the timer runs out. Every new word must begin with the last letter of the previous word and strictly adhere to the chosen thematic category.
+
+Built with a focus on versatile deployment in educational and team-building environments, WordSnake offers a dual-mode architecture: a <strong>Board Mode</strong> for facilitating traditional physical whiteboard play, and a fully digital <strong>Smart TV Mode</strong> featuring an interactive split-screen interface with built-in validation and on-screen keyboards.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">The Chain Rule</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Each submitted word must start with the final letter of the preceding word, enforcing strict spelling accuracy and lateral thinking under pressure.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Categorical Integrity</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>All vocabulary must fit the selected category. The engine automatically rejects off-topic submissions using pre-compiled dictionaries and O(1) Set lookups.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Global Uniqueness</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Words are globally tracked across both teams. Once a word is played, it is eliminated from the available pool, preventing repetition and forcing creative recall.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+The project is engineered using a robust, dependency-free **Vanilla HTML5/CSS3/JS** stack, ensuring maximum cross-platform compatibility and rapid loading times on classroom hardware.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend & Styling</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Utilizes advanced CSS Grid and Flexbox for complex split-screen UI layouts (Smart TV mode). Features custom SVG dash-offset animations for timer rings and an HTML5 Canvas particle system for the background.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">State Management</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A centralized `G` object manages timers, active categories, and individual team states. The validation engine processes real-time string manipulation against the globally used `Set()`.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Virtual Keyboards</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Dynamically generated on-screen keyboards for the Smart TV mode optimize the experience for touch screens or smart board displays without relying on physical keyboards.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Data Structures</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Houses comprehensive dictionaries (`categories.js`) utilizing JavaScript `Set` objects for O(1) lookup times. Supports dynamic "Custom Categories" for specialized topics.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Project Vision & Utility</h2>
+
+WordSnake bridges the gap between traditional classroom vocabulary games and modern digital interactives. By offering a clean, distraction-free **Board Mode**, it acts as an elegant timer and prompt generator for physical play. Conversely, the **Smart TV Mode** transforms the application into a standalone digital arena. 
+
+With its high-fidelity UI, rigorous input validation, and competitive mechanics, WordSnake is an ideal tool for ESL/EFL classrooms, corporate icebreakers, and casual party environments.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Application Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/word-snake/1.png" alt="WordSnake App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/word-snake/2.png" alt="WordSnake App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

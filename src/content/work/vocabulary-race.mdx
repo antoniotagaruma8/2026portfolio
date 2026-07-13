@@ -1,0 +1,168 @@
+---
+title: "Vocabulary Race Activity"
+subtitle: "Interactive Local-Multiplayer Vocabulary Engine"
+tech: ["HTML5", "CSS3", "JavaScript"]
+link: "https://vocabulary-race-activity.vercel.app"
+github: "https://github.com/antoniotagaruma8/VocabularyRaceActivity"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+The <strong>Vocabulary Race Activity</strong> is a high-fidelity, interactive, browser-based educational game designed to gamify vocabulary acquisition and review. Engineered specifically for large displays (such as classroom TVs or interactive whiteboards), the platform transforms standard language learning into an engaging, competitive multiplayer experience. By challenging students to recall and input vocabulary words under time pressure, the system enhances engagement, retention, and collaborative learning dynamics.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-blue" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Immersive Engagement</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Designed with a "TV hardware optimized" UI, the application features large typography, a dark-themed UI (ideal for OLED/LED displays), and fluid animations to captivate students.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-teal" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Frictionless Setup</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Teachers can instantly generate game content by pasting any article or story text into the game engine, which automatically extracts relevant target vocabulary and filters out common "stop words."</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-red-500" size={24} />
+    </div>
+    
+
+<h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Adaptive Play Modes</h3>
+
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Supports versatile classroom environments with both <strong>Split-Screen (Dual)</strong> mode for simultaneous head-to-head racing, and <strong>Turn-Based</strong> mode for shared device constraints.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Gameplay Mechanics & Features</h2>
+
+The current functional prototype delivers a robust local-multiplayer experience with the following features:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Dynamic Target Word Extraction</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    An intelligent parsing system that sanitizes input text, removing common articles, pronouns, simple verbs, and profanity, isolating complex vocabulary for the game session.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">On-Screen Keyboard Architecture</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Custom-built, touch-optimized virtual keyboards for both teams (Red vs. Blue) to prevent device OS keyboard interference and ensure seamless interaction on interactive boards.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Real-time Feedback & Scoring</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Floating score animations, visual turn indicators, and an independent status messaging system that provides immediate feedback upon word submission.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Game Session Management</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Adjustable game durations (5 to 45 minutes) and an end-game review modal featuring a celebratory confetti engine to reward the winning team.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture</h2>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">Current Implementation (V1 Prototype)</h3>
+
+The current iteration is a highly optimized, monolithic frontend application (`index.html`) demonstrating the core game loop without external dependencies.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Vanilla HTML5, CSS3, and JavaScript.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">UI/UX</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Custom CSS animations (`scorePop`, `floatUp`), flexbox-driven responsive layouts, and strict hardware optimizations (disabling zoom/swipe gestures and text highlighting for touchscreens).
+  </div>
+</div>
+</div>
+
+<h3 className="text-lg font-bold text-foreground mt-10 mb-6">Target Architecture Blueprint (V2 Full-Stack Integration)</h3>
+
+The established technical blueprint outlines a robust, scalable multiplayer architecture for future development:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Frontend Framework</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    React.js (Vite) with Tailwind CSS and Zustand for state management.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Real-Time Engine</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Socket.io for low-latency WebSocket communication between student devices and the host display.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Backend API</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Node.js and Express.js to handle lobby creation, game state orchestration, and authentication.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Data Persistence</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    PostgreSQL for long-term storage of user accounts, custom word sets, and historical performance data, paired with Redis for managing active session states.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Strategic Trajectory</h2>
+
+The Vocabulary Race Activity successfully bridges the gap between traditional vocabulary drills and modern gamified learning. The immediate functionality provides a powerful, zero-install classroom tool for educators, while the planned V2 architecture paves the way for a distributed, cloud-hosted SaaS platform where students can join via their own devices using unique lobby codes.
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Prototype Overview</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/vocabulary-race/1.png" alt="Vocabulary Race App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/vocabulary-race/2.png" alt="Vocabulary Race App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+
+</div>

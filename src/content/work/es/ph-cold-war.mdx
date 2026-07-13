@@ -1,0 +1,116 @@
+---
+title: "Cold War Archives: Declassified"
+subtitle: "Filipinas Durante la Guerra Fría"
+tech: ["HTML5", "CSS3", "Vanilla JavaScript"]
+link: "https://ph-during-cold-war.vercel.app"
+github: "https://github.com/antoniotagaruma8/PhDuringColdWar"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+<strong>Cold War Archives: Declassified</strong> es un juego educativo interactivo basado en navegador diseñado para enseñar la historia sociopolítica, económica y geopolítica de Filipinas durante la era de la Guerra Fría. Disfrazada como una interfaz de terminal retrofuturista, la aplicación desafía a los estudiantes a "descifrar" archivos de inteligencia clasificados ordenando oraciones históricas.
+
+Al gamificar el proceso de aprendizaje, el proyecto transforma datos históricos densos, desde la Rebelión Hukbalahap y la Ley Marcial hasta el Bell Trade Act y la Revolución EDSA, en una experiencia de rompecabezas táctil y atractiva.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">Aprendizaje Constructivista</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Aprovecha el recuerdo activo y la construcción de sintaxis al requerir que los estudiantes ensamblen hechos históricos, reforzando tanto el conocimiento histórico como la estructura gramatical simultáneamente.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Dificultad Progresiva</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Cuenta con 40 niveles históricos distintos divididos en FÁCIL (Cadete) para conceptos fundamentales y DIFÍCIL (Agente) para temas complejos como el Capitalismo de Amigos y la Paradoja Filipina.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Inmersión Temática</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>La narrativa del "archivo clasificado" contextualiza la experiencia de aprendizaje, haciendo que los estudiantes se sientan como analistas de inteligencia descubriendo verdades históricas.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Características y Mecánicas Principales</h2>
+
+La aplicación transforma la clasificación de vocabulario de memoria en una experiencia de aprendizaje activa:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Motor de Arrastrar y Soltar Optimizado</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los manejadores de eventos táctiles integrados (`touchstart`, `touchmove`, `touchend`) junto con los eventos de ratón estándar brindan una experiencia interactiva universal y sin frustraciones en todos los dispositivos.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Entrega de Contenido Dinámico</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    El motor del juego itera a través de un array JSON curado de 40 eventos históricos, generando dinámicamente grupos de palabras y validando las entradas del usuario. Los controles integrados permiten a los usuarios volver a mezclar las palabras si se atascan.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Feedback Inmersivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Los acentos verdes de terminal, la tipografía personalizada (`Courier New`) y las zonas de respuesta reactiva (verde para correcto, rojo para incorrecto) proporcionan bucles de retroalimentación visual inmediata para el alumno.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Arquitectura Técnica</h2>
+
+El proyecto está construido como una aplicación de página única liviana y de alto rendimiento utilizando tecnologías web vanilla, que no requiere frameworks pesados ni pasos de compilación.
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Motor Interactivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Una implementación robusta y personalizada de la API de Arrastrar y Soltar admite la manipulación del DOM en tiempo real para una clasificación, posicionamiento y ajuste fluidos de los chips de palabras dentro de las zonas de colocación.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Estética Retro-CRT</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    CSS Vanilla personalizado que utiliza variables CSS dinámicas, glassmorfismo (fondos `rgba`), superposiciones de líneas de escaneo y animaciones de pulso simula a la perfección un terminal de inteligencia de la década de 1980.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Público Objetivo</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Diseñado específicamente para estudiantes de secundaria a nivel universitario que estudian Historia de Filipinas, Estudios Asiáticos o Ciencias Políticas, sirviendo como un complemento interactivo a las conferencias tradicionales.
+  </div>
+</div>
+</div>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">Visión General</span>
+  <div className="grid grid-cols-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/ph-cold-war/1.png" alt="Cold War Archives App View 1" className="object-cover w-full h-full" />
+    </div>
+    <div className="col-span-1 overflow-hidden rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground/50 relative">
+      <ZoomableImage src="/images/ph-cold-war/2.png" alt="Cold War Archives App View 2" className="object-cover w-full h-full" />
+    </div>
+  </div>
+</div>

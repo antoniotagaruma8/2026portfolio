@@ -1,0 +1,139 @@
+---
+title: "ESO Smart Lesson Planner"
+subtitle: "AI-Powered Curriculum Design Tool | LOMLOE Compliant | RAG Optimized"
+tech: ["Streamlit", "FastAPI", "Python", "Gemini 2.0", "RAG", "FAISS", "PostgreSQL", "Google OAuth"]
+link: "https://esosl-pv2.vercel.app/"
+github: "https://github.com/antoniotagaruma8/ESOSLPv2"
+---
+
+<div className="text-base text-muted-foreground leading-relaxed max-w-3xl mb-12">
+The <strong>ESO Smart Lesson Planner (ESOSLPv2)</strong> is a state-of-the-art educational technology platform engineered to revolutionize the lesson planning workflow for educators at the ESO (Educación Secundaria Obligatoria) and Bachillerato levels. By synthesizing advanced Large Language Models (LLMs) with rigorous pedagogical frameworks, ESOSLPv2 automates the generation of highly specialized, curriculum-aligned educational materials. 
+
+Its core vision is to drastically reduce teacher workload—transforming hours of preparation into a streamlined process—while simultaneously elevating the quality, engagement, and personalization of classroom instruction.
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-red-500/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Activity className="text-red-500" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-red-400 transition-colors">Comprehensive Toolkit</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Orchestrates the creation of professional teacher guides, differentiated student worksheets, automated answer keys, and dynamic presentation slides from a single topic input.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-blue/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <Layers className="text-accent-blue" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-blue transition-colors">LOMLOE & RAG Architecture</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Integrates a sophisticated Retrieval-Augmented Generation (RAG) engine powered by FAISS to ensure all content is factually accurate and anchored to official Spanish LOMLOE competencies.</p>
+    </div>
+  </div>
+  <div className="group glass-card p-6 md:p-8 rounded-3xl border hover:border-accent-teal/30 transition-all cursor-default flex flex-col h-full">
+    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+      <CheckCircle className="text-accent-teal" size={24} />
+    </div>
+    <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-accent-teal transition-colors">Strategic Impact</h3>
+    <div className="text-sm text-muted-foreground leading-relaxed flex-grow space-y-4">
+      <p>Empowers educators to redirect their focus from administrative preparation to direct student engagement, mentoring, and pedagogical innovation by automating instructional design.</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="section-label mt-12">Pedagogical Mechanics & Compliance</h2>
+
+The platform goes beyond text generation to function as a context-aware teaching assistant:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Automated Differentiated Instruction</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Natively supports inclusive classrooms by generating tiered activities that adjust cognitive demand across Level 1 (Support), Level 2 (Standard), and Level 3 (Advanced).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Smart Grade-Level Personas</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Dynamically calibrates linguistic complexity, tone, and pedagogical approach based on the selected year level (1º ESO to 2º Bachillerato) and designated CEFR level (A1-C2).
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Gamification & Engagement</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Structurally engineers lessons for high engagement with "Billboard-style" hooks, interactive warm-up puzzles (e.g. Emoji Decoders), and automated curation of relevant educational video clips.
+  </div>
+</div>
+</div>
+
+<h2 className="section-label mt-12">Technical Architecture & Live Workflow</h2>
+
+Built upon a robust, modular full-stack architecture prioritizing scalability and performance:
+<div className="space-y-8 my-8">
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">AI Orchestration & RAG</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Integrates Google's latest Gemini models via Python with intelligent API key-rotation. FAISS Vector Database powers efficient semantic search, grounding the AI in verified educational documents.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Live Editing & Review Workflow</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    A Next.js frontend features animated terminal-style feedback logs as agents work concurrently. An integrated Live Editor allows educators to review and refine drafts before finalization.
+  </div>
+</div>
+<div className="flex flex-col md:flex-row gap-2 md:gap-8 border-l-2 border-accent-blue/30 pl-4 md:pl-6 ml-2 md:ml-0 group">
+  <div className="min-w-[220px] shrink-0 pt-1">
+    <div className="text-sm font-bold text-foreground group-hover:text-accent-blue transition-colors">Automated Document Engines</div>
+  </div>
+  <div className="text-sm text-muted-foreground leading-relaxed">
+    Custom generation modules automate the creation of professionally formatted PDF documents and visually engaging slide decks, delivered instantly via a "One-Click Download All" `.zip` archive.
+  </div>
+</div>
+</div>
+
+### Sample Output
+
+Curious about the actual quality of the RAG-optimized generation? Check out this complete sample package generated by the AI for a standard ESO class:
+
+<a href="/docs/esoslpv2/sample-lesson-plan.pdf" target="_blank" className="inline-block px-5 py-3 mt-4 mb-8 text-sm font-medium text-white bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all">
+  📄 View Sample Lesson Plan Package (PDF)
+</a>
+
+{/* Bento Media Gallery */}
+<div className="mt-12">
+  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4 px-2 block">System Analytics Preview</span>
+  <div className="grid grid-cols-3 grid-rows-2 gap-3 max-w-4xl mx-auto h-[350px]">
+    
+    {/* Pahalang (Horizontal Top Left) */}
+    <div className="col-span-2 row-span-1 overflow-hidden rounded-xl border border-border bg-card">
+      <ZoomableImage src="/images/esoslpv2/generator.png" alt="Generator Interface" className="object-cover w-full h-full" />
+    </div>
+    
+    {/* Square (Top Right) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-[#111111]">
+      <ZoomableImage src="/images/esoslpv2/dashboard-efficiency.png" alt="Efficiency Impact" className="object-cover w-full h-full" />
+    </div>
+    
+    {/* Square (Bottom Left) */}
+    <div className="col-span-1 row-span-1 overflow-hidden rounded-xl border border-border bg-[#111111]">
+      <ZoomableImage src="/images/esoslpv2/dashboard-demographics.png" alt="Participant Demographics" className="object-cover w-full h-full" />
+    </div>
+    
+    {/* Pahalang (Horizontal Bottom Right) */}
+    <div className="col-span-2 row-span-1 overflow-hidden rounded-xl border border-border bg-[#111111]">
+      <ZoomableImage src="/images/esoslpv2/dashboard-tam.png" alt="TAM Monitoring" className="object-cover w-full h-full" />
+    </div>
+
+  </div>
+</div>
