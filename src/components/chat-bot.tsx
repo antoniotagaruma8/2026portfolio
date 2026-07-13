@@ -7,16 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [localInput, setLocalInput] = useState("");
-  const { messages, status, error, sendMessage } = useChat() as any;
-  const isLoading = status === 'submitted' || status === 'streaming';
-
-  const handleCustomSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!localInput.trim() || isLoading) return;
-    sendMessage({ role: 'user', content: localInput });
-    setLocalInput('');
-  };
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat() as any;
 
   return (
     <>
@@ -93,17 +84,17 @@ export function ChatBot() {
             </div>
 
             {/* Input Form */}
-            <form onSubmit={handleCustomSubmit} className="p-4 bg-background border-t">
+            <form onSubmit={handleSubmit} className="p-4 bg-background border-t">
               <div className="relative">
                 <input
-                  value={localInput}
-                  onChange={(e) => setLocalInput(e.target.value)}
+                  value={input}
+                  onChange={handleInputChange}
                   placeholder="Ask a question..."
                   className="w-full pl-4 pr-12 py-3 rounded-xl border bg-muted/50 focus:outline-none focus:ring-2 focus:ring-accent/50 text-sm text-foreground"
                 />
                 <button 
                   type="submit" 
-                  disabled={isLoading || !localInput.trim()}
+                  disabled={isLoading || !input.trim()}
                   className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-accent text-white rounded-lg flex items-center justify-center disabled:opacity-50"
                 >
                   <Send size={14} />

@@ -24,9 +24,7 @@ ${JSON.stringify(archiveData.en)}
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    console.log("[DEBUG API CHAT] body:", JSON.stringify(body));
     const messages = Array.isArray(body) ? body : body.messages;
-    console.log("[DEBUG API CHAT] messages:", JSON.stringify(messages));
 
     if (!Array.isArray(messages)) {
       return new Response(JSON.stringify({ error: "Invalid messages format" }), { status: 400 });
@@ -42,10 +40,7 @@ export async function POST(req: Request) {
     const result = await streamText({
       model: groq("llama-3.3-70b-versatile"),
       system: SYSTEM_PROMPT,
-      messages: messages.map((m: any) => ({
-        role: m.role,
-        content: m.content
-      })),
+      messages: messages.map((m: any) => ({ role: m.role, content: m.content })),
     });
 
     // toUIMessageStreamResponse replaces toDataStreamResponse in AI SDK v5+

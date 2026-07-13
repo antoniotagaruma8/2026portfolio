@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Code2, GraduationCap, Lightbulb } from "lucide-react";
 
 export function AboutSection({ dict }: { dict: any }) {
-  const containerVariants: Variants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -12,7 +12,7 @@ export function AboutSection({ dict }: { dict: any }) {
     }
   };
 
-  const itemVariants: Variants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };

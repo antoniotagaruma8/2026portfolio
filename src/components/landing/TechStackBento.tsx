@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Layout, Code2, FileText, Terminal } from "lucide-react";
 import { BentoCard } from "@/components/shared/BentoCard";
 
@@ -8,7 +8,7 @@ interface TechStackBentoProps {
   dict: any;
 }
 
-const container: Variants = {
+const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -16,7 +16,7 @@ const container: Variants = {
   }
 };
 
-const item: Variants = {
+const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
 };
