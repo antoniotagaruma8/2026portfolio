@@ -10,7 +10,7 @@ export const cvData = {
       phone: "+34 617 724 828",
       whatsapp: "@antoniotagaruma",
       github: "github.com/antoniotagaruma8",
-      portfolio: "anton.io",
+      portfolio: "antoniotagaruma.vercel.app/en",
     },
     sections: {
       experience: "Experience",
@@ -115,7 +115,7 @@ export const cvData = {
       phone: "+34 617 724 828",
       whatsapp: "@antoniotagaruma",
       github: "github.com/antoniotagaruma8",
-      portfolio: "anton.io",
+      portfolio: "antoniotagaruma.vercel.app/en",
     },
     sections: {
       experience: "Experiencia",
