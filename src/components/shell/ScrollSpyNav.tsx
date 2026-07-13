@@ -50,7 +50,7 @@ export function ScrollSpyNav({ navItems, theme = "teal" }: ScrollSpyNavProps) {
           }
         });
       },
-      { rootMargin: "-20% 0px -40% 0px" } 
+      { rootMargin: "-20% 0px -60% 0px" } 
     );
 
     items.forEach((item) => {
@@ -58,7 +58,22 @@ export function ScrollSpyNav({ navItems, theme = "teal" }: ScrollSpyNavProps) {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // Fix: last section never enters the observer zone because there's
+    // no content below it. Activate it when the user reaches the bottom.
+    const lastId = items[items.length - 1]?.id;
+    const handleScroll = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
+      if (nearBottom && lastId) {
+        setActiveId(lastId);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [shouldSpy, items]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
