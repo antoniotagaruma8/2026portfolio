@@ -14,7 +14,7 @@ export function FooterContact({ dict }: { dict: any }) {
           <span className="w-8 h-8 flex items-center justify-center bg-[#132d21]/30 text-accent-teal rounded-lg border border-accent-teal/20 shadow-[0_0_10px_-2px_rgba(100,244,172,0.1)]">
             <MapPin size={16} strokeWidth={1.5} />
           </span>
-          <span className="text-foreground/90 font-medium">Villaverde, Madrid</span>
+          <span className="text-foreground/90 font-medium">Madrid, Spain</span>
         </div>
         <div className="flex items-center gap-4">
           <span className="w-8 h-8 flex items-center justify-center bg-[#132d21]/30 text-accent-teal rounded-lg border border-accent-teal/20 shadow-[0_0_10px_-2px_rgba(100,244,172,0.1)]">
