@@ -26,10 +26,10 @@ export function ResumeSection({ dict }: { dict: any }) {
       file: "/cv-education.pdf",
       filename: "CV-Education-Antonio-Tagaruma.pdf",
       icon: GraduationCap,
-      color: "accent-amber",
-      bg: "bg-[#2d2013]/50",
-      border: "border-[#4a3a1e]",
-      hoverBorder: "hover:border-accent-amber",
+      color: "accent-teal",
+      bg: "bg-[#132d21]/50",
+      border: "border-[#1e4a32]",
+      hoverBorder: "hover:border-accent-teal",
     },
   ];
 
