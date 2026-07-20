@@ -1,5 +1,5 @@
 import { groq } from "@ai-sdk/groq";
-import { streamText, convertToModelMessages } from "ai";
+import { streamText } from "ai";
 
 import { cvData } from "@/lib/cv-data";
 import { archiveData } from "@/lib/archive-data";
@@ -37,10 +37,25 @@ export async function POST(req: Request) {
       }), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
 
+    // Normalize messages: handle both old SDK (m.content string) and
+    // new AI SDK v5+ (m.parts array) formats so multi-turn works correctly.
+    const normalizedMessages = messages.map((m: any) => {
+      const text =
+        typeof m.content === 'string'
+          ? m.content
+          : Array.isArray(m.parts)
+          ? m.parts
+              .filter((p: any) => p.type === 'text')
+              .map((p: any) => p.text)
+              .join('')
+          : '';
+      return { role: m.role as 'user' | 'assistant', content: text };
+    });
+
     const result = await streamText({
       model: groq("llama-3.3-70b-versatile"),
       system: SYSTEM_PROMPT,
-      messages: await convertToModelMessages(messages),
+      messages: normalizedMessages,
     });
 
     // toUIMessageStreamResponse replaces toDataStreamResponse in AI SDK v5+
