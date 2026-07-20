@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     const result = await streamText({
       model: groq("llama-3.3-70b-versatile"),
       system: SYSTEM_PROMPT,
-      messages: messages.map((m: any) => ({ role: m.role, content: m.content })),
+      messages: convertToModelMessages(messages),
     });
 
     // toUIMessageStreamResponse replaces toDataStreamResponse in AI SDK v5+
